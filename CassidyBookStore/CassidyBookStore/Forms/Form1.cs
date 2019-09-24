@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CassidyBookStore.Forms;
+
 
 namespace CassidyBookStore
 {
@@ -15,6 +17,15 @@ namespace CassidyBookStore
         public Form1()
         {
             InitializeComponent();
+            uC_SlideUpLogin2.onFinish += OnFinish;
         }
+
+        void OnFinish()
+        {
+            this.Hide();
+            Form_Dashboard fd = new Form_Dashboard();
+            fd.ShowDialog();
+        }
+        
     }
 }

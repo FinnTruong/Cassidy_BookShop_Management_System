@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CassidyBookStore.Forms;
 
 namespace CassidyBookStore
 {
@@ -17,9 +18,13 @@ namespace CassidyBookStore
             InitializeComponent();
         }
 
+        public delegate void OnFinish();
+        public event OnFinish onFinish;
+
         int panel1_y = 300;
         int waiter = 0;
-       
+        int waiter2 = 0;
+
 
         //LOG IN
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -31,7 +36,7 @@ namespace CassidyBookStore
                 timer2.Enabled = true;
                 label4.Text = "Welcome back " + textBox1.Text;
                 label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
-            }
+            }  
             else
             {
                 textBox1.Clear();
@@ -96,12 +101,19 @@ namespace CassidyBookStore
         }
 
         //Load Main Form Timer
-        private void Timer3_Tick(object sender, EventArgs e)
+        public void Timer3_Tick(object sender, EventArgs e)
         {
-            Application.Exit();
+            waiter2++;
+            if(waiter2>150)
+            {
+                timer3.Stop();
+                onFinish();
+            }
         }
 
-       
-        
+        private void UC_SlideUpLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

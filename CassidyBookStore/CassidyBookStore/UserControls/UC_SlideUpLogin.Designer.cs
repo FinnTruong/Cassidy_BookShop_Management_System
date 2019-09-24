@@ -196,7 +196,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 2000;
+            this.timer3.Interval = 10;
             this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
             // 
             // UC_SlideUpLogin
@@ -208,6 +208,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UC_SlideUpLogin";
             this.Size = new System.Drawing.Size(600, 900);
+            this.Load += new System.EventHandler(this.UC_SlideUpLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
