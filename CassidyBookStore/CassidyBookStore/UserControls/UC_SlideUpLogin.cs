@@ -27,7 +27,7 @@ namespace CassidyBookStore
 
 
         //LOG IN
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void Login()
         {
             if(textBox1.Text == "Finn" && textBox2.Text =="pass123")
             {
@@ -39,8 +39,8 @@ namespace CassidyBookStore
             }  
             else
             {
-                textBox1.Clear();
-                textBox2.Clear();
+                textBox1.Text = "";
+                textBox2.Text = "";
                 MessageBox.Show("Your username or password is incorrect");
             }
         }
@@ -55,7 +55,7 @@ namespace CassidyBookStore
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                BtnLogin_Click(sender, e);
+                Login();
             }
         }
         private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -63,7 +63,7 @@ namespace CassidyBookStore
             if (e.KeyChar == (char)Keys.Enter)
             {
                 e.Handled = true;
-                BtnLogin_Click(sender, e);
+                Login();
             }
         }
 
@@ -109,11 +109,6 @@ namespace CassidyBookStore
                 timer3.Stop();
                 onFinish();
             }
-        }
-
-        private void UC_SlideUpLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

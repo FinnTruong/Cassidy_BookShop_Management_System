@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CassidyBookStore.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,12 @@ namespace CassidyBookStore.Forms
             isCollapsed = false;
         }
 
-       
+        private void AddControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelControls.Controls.Clear();
+            panelControls.Controls.Add(c);
+        }
        
         private void Timer1_Tick(object sender, EventArgs e)
         {
@@ -69,6 +75,39 @@ namespace CassidyBookStore.Forms
         private void BtnLogout_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            UC_Home uch = new UC_Home();
+            AddControlsToPanel(uch);
         }
     }
 }
