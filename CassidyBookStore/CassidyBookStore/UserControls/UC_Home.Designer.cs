@@ -195,7 +195,7 @@
             // 
             // bunifuGradientPanel7
             // 
-            this.bunifuGradientPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuGradientPanel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGradientPanel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel7.BackgroundImage")));
             this.bunifuGradientPanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel7.Controls.Add(this.label3);
@@ -347,7 +347,7 @@
             // 
             // bunifuGradientPanel9
             // 
-            this.bunifuGradientPanel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuGradientPanel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuGradientPanel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel9.BackgroundImage")));
             this.bunifuGradientPanel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel9.Controls.Add(this.label7);
@@ -406,7 +406,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(77, 220);
+            this.label9.Location = new System.Drawing.Point(36, 220);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 23);
             this.label9.TabIndex = 11;
@@ -429,6 +429,7 @@
             // 
             // bunifuDataViz2
             // 
+            this.bunifuDataViz2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDataViz2.animationEnabled = false;
             this.bunifuDataViz2.AxisLineColor = System.Drawing.Color.LightGray;
             this.bunifuDataViz2.AxisXFontColor = System.Drawing.Color.Gray;
@@ -446,10 +447,10 @@
             0,
             0});
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz2.Location = new System.Drawing.Point(559, 259);
+            this.bunifuDataViz2.Location = new System.Drawing.Point(547, 259);
             this.bunifuDataViz2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
-            this.bunifuDataViz2.Size = new System.Drawing.Size(398, 362);
+            this.bunifuDataViz2.Size = new System.Drawing.Size(410, 362);
             this.bunifuDataViz2.TabIndex = 13;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz2.Title = "";
@@ -459,7 +460,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(595, 220);
+            this.label10.Location = new System.Drawing.Point(543, 220);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 23);
             this.label10.TabIndex = 14;

@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnScale = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMinimize = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelLeft = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSlideMenu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,13 +48,9 @@
             this.btnSell = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHome = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnMinimize = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnScale = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelControls = new System.Windows.Forms.Panel();
-            this.panelLeft.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -64,6 +64,130 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.btnScale);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(217, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(983, 51);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnScale
+            // 
+            this.btnScale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnScale.BackColor = System.Drawing.Color.Transparent;
+            this.btnScale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScale.BorderRadius = 0;
+            this.btnScale.ButtonText = "";
+            this.btnScale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelAnimator.SetDecoration(this.btnScale, BunifuAnimatorNS.DecorationType.None);
+            this.btnScale.DisabledColor = System.Drawing.Color.Gray;
+            this.btnScale.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnScale.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnScale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnScale.Iconimage")));
+            this.btnScale.Iconimage_right = null;
+            this.btnScale.Iconimage_right_Selected = null;
+            this.btnScale.Iconimage_Selected = null;
+            this.btnScale.IconMarginLeft = 0;
+            this.btnScale.IconMarginRight = 0;
+            this.btnScale.IconRightVisible = true;
+            this.btnScale.IconRightZoom = 0D;
+            this.btnScale.IconVisible = true;
+            this.btnScale.IconZoom = 60D;
+            this.btnScale.IsTab = false;
+            this.btnScale.Location = new System.Drawing.Point(800, 0);
+            this.btnScale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScale.Name = "btnScale";
+            this.btnScale.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnScale.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnScale.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnScale.selected = false;
+            this.btnScale.Size = new System.Drawing.Size(61, 51);
+            this.btnScale.TabIndex = 4;
+            this.btnScale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScale.Textcolor = System.Drawing.Color.White;
+            this.btnScale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScale.Click += new System.EventHandler(this.BunifuFlatButton1_Click_1);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.ButtonText = "";
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
+            this.btnClose.DisabledColor = System.Drawing.Color.Gray;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnClose.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClose.Iconimage")));
+            this.btnClose.Iconimage_right = null;
+            this.btnClose.Iconimage_right_Selected = null;
+            this.btnClose.Iconimage_Selected = null;
+            this.btnClose.IconMarginLeft = 0;
+            this.btnClose.IconMarginRight = 0;
+            this.btnClose.IconRightVisible = true;
+            this.btnClose.IconRightZoom = 0D;
+            this.btnClose.IconVisible = true;
+            this.btnClose.IconZoom = 60D;
+            this.btnClose.IsTab = false;
+            this.btnClose.Location = new System.Drawing.Point(861, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnClose.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnClose.selected = false;
+            this.btnClose.Size = new System.Drawing.Size(61, 51);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Textcolor = System.Drawing.Color.White;
+            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Click += new System.EventHandler(this.BunifuFlatButton1_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.BorderRadius = 0;
+            this.btnMinimize.ButtonText = "";
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelAnimator.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
+            this.btnMinimize.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Iconimage")));
+            this.btnMinimize.Iconimage_right = null;
+            this.btnMinimize.Iconimage_right_Selected = null;
+            this.btnMinimize.Iconimage_Selected = null;
+            this.btnMinimize.IconMarginLeft = 0;
+            this.btnMinimize.IconMarginRight = 0;
+            this.btnMinimize.IconRightVisible = true;
+            this.btnMinimize.IconRightZoom = 0D;
+            this.btnMinimize.IconVisible = true;
+            this.btnMinimize.IconZoom = 60D;
+            this.btnMinimize.IsTab = false;
+            this.btnMinimize.Location = new System.Drawing.Point(922, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnMinimize.OnHovercolor = System.Drawing.Color.Silver;
+            this.btnMinimize.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMinimize.selected = false;
+            this.btnMinimize.Size = new System.Drawing.Size(61, 51);
+            this.btnMinimize.TabIndex = 3;
+            this.btnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinimize.Textcolor = System.Drawing.Color.White;
+            this.btnMinimize.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.Click += new System.EventHandler(this.BunifuFlatButton3_Click);
             // 
             // timer1
             // 
@@ -389,146 +513,22 @@
             // 
             this.panelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.panelAnimator.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 20;
-            animation3.Padding = new System.Windows.Forms.Padding(30);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.panelAnimator.DefaultAnimation = animation3;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.ButtonText = "";
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
-            this.btnClose.DisabledColor = System.Drawing.Color.Gray;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnClose.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClose.Iconimage")));
-            this.btnClose.Iconimage_right = null;
-            this.btnClose.Iconimage_right_Selected = null;
-            this.btnClose.Iconimage_Selected = null;
-            this.btnClose.IconMarginLeft = 0;
-            this.btnClose.IconMarginRight = 0;
-            this.btnClose.IconRightVisible = true;
-            this.btnClose.IconRightZoom = 0D;
-            this.btnClose.IconVisible = true;
-            this.btnClose.IconZoom = 60D;
-            this.btnClose.IsTab = false;
-            this.btnClose.Location = new System.Drawing.Point(861, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnClose.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnClose.selected = false;
-            this.btnClose.Size = new System.Drawing.Size(61, 51);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Click += new System.EventHandler(this.BunifuFlatButton1_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimize.BorderRadius = 0;
-            this.btnMinimize.ButtonText = "";
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAnimator.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
-            this.btnMinimize.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Iconimage")));
-            this.btnMinimize.Iconimage_right = null;
-            this.btnMinimize.Iconimage_right_Selected = null;
-            this.btnMinimize.Iconimage_Selected = null;
-            this.btnMinimize.IconMarginLeft = 0;
-            this.btnMinimize.IconMarginRight = 0;
-            this.btnMinimize.IconRightVisible = true;
-            this.btnMinimize.IconRightZoom = 0D;
-            this.btnMinimize.IconVisible = true;
-            this.btnMinimize.IconZoom = 60D;
-            this.btnMinimize.IsTab = false;
-            this.btnMinimize.Location = new System.Drawing.Point(922, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnMinimize.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnMinimize.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMinimize.selected = false;
-            this.btnMinimize.Size = new System.Drawing.Size(61, 51);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimize.Textcolor = System.Drawing.Color.White;
-            this.btnMinimize.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.Click += new System.EventHandler(this.BunifuFlatButton3_Click);
-            // 
-            // btnScale
-            // 
-            this.btnScale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnScale.BackColor = System.Drawing.Color.Transparent;
-            this.btnScale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnScale.BorderRadius = 0;
-            this.btnScale.ButtonText = "";
-            this.btnScale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAnimator.SetDecoration(this.btnScale, BunifuAnimatorNS.DecorationType.None);
-            this.btnScale.DisabledColor = System.Drawing.Color.Gray;
-            this.btnScale.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScale.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnScale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnScale.Iconimage")));
-            this.btnScale.Iconimage_right = null;
-            this.btnScale.Iconimage_right_Selected = null;
-            this.btnScale.Iconimage_Selected = null;
-            this.btnScale.IconMarginLeft = 0;
-            this.btnScale.IconMarginRight = 0;
-            this.btnScale.IconRightVisible = true;
-            this.btnScale.IconRightZoom = 0D;
-            this.btnScale.IconVisible = true;
-            this.btnScale.IconZoom = 60D;
-            this.btnScale.IsTab = false;
-            this.btnScale.Location = new System.Drawing.Point(800, 0);
-            this.btnScale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnScale.Name = "btnScale";
-            this.btnScale.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnScale.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnScale.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnScale.selected = false;
-            this.btnScale.Size = new System.Drawing.Size(61, 51);
-            this.btnScale.TabIndex = 4;
-            this.btnScale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScale.Textcolor = System.Drawing.Color.White;
-            this.btnScale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScale.Click += new System.EventHandler(this.BunifuFlatButton1_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.btnScale);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(217, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 51);
-            this.panel1.TabIndex = 5;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 20;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.panelAnimator.DefaultAnimation = animation1;
             // 
             // panelControls
             // 
@@ -551,8 +551,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Dashboard";
-            this.panelLeft.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
