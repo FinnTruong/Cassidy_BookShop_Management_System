@@ -16,13 +16,20 @@ namespace CassidyBookStore.UserControls
         public UC_Home()
         {
             InitializeComponent();
+            Bunifu.Framework.Lib.Elipse.Apply(card1, 5);
+            Bunifu.Framework.Lib.Elipse.Apply(card2, 5);
+            Bunifu.Framework.Lib.Elipse.Apply(card3, 5);
+            Bunifu.Framework.Lib.Elipse.Apply(card4, 5);
+
+
+
         }
 
        
         private void LoadChart1()
         {
             var cnv = new Bunifu.DataViz.WinForms.Canvas();
-            var dataPoint = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_line);
+            var dataPoint = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_area);
 
             dataPoint.addLabely("Jan", rand.Next(0, 500).ToString());
             dataPoint.addLabely("Feb", rand.Next(0, 500).ToString());
@@ -37,36 +44,22 @@ namespace CassidyBookStore.UserControls
             dataPoint.addLabely("Dec", rand.Next(0, 500).ToString());
 
             cnv.addData(dataPoint);
-            bunifuDataViz1.colorSet.Add(Color.Red);
+            bunifuDataViz1.colorSet.Add(Color.FromArgb(49,197,176));
             bunifuDataViz1.Render(cnv);
 
         }
 
-        private void LoadChart2()
-        {
-            var cnv = new Bunifu.DataViz.WinForms.Canvas();
-            var dataPoint = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_column);
-
-            dataPoint.addLabely("Mon", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Tue", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Wed", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Thu", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Fri", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Sat", rand.Next(0, 100).ToString());
-            dataPoint.addLabely("Sun", rand.Next(0, 100).ToString());
-            
-
-            cnv.addData(dataPoint);
-            bunifuDataViz2.colorSet.Add(Color.Red);
-            bunifuDataViz2.Render(cnv);
-
-        }
+       
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
             LoadChart1();
-            LoadChart2();
         }
 
-     
+        private void LoadData_Tick(object sender, EventArgs e)
+        {
+            loadData.Stop();
+            LoadChart1();
+        }
+
     }
 }

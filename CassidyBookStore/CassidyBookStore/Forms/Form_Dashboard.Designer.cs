@@ -67,15 +67,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Controls.Add(this.btnScale);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(217, 0);
+            this.panel1.Location = new System.Drawing.Point(181, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 51);
+            this.panel1.Size = new System.Drawing.Size(1019, 45);
             this.panel1.TabIndex = 5;
             // 
             // btnScale
@@ -101,14 +101,14 @@
             this.btnScale.IconVisible = true;
             this.btnScale.IconZoom = 60D;
             this.btnScale.IsTab = false;
-            this.btnScale.Location = new System.Drawing.Point(800, 0);
-            this.btnScale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScale.Location = new System.Drawing.Point(836, 0);
+            this.btnScale.Margin = new System.Windows.Forms.Padding(4);
             this.btnScale.Name = "btnScale";
             this.btnScale.Normalcolor = System.Drawing.Color.Transparent;
             this.btnScale.OnHovercolor = System.Drawing.Color.Silver;
             this.btnScale.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScale.selected = false;
-            this.btnScale.Size = new System.Drawing.Size(61, 51);
+            this.btnScale.Size = new System.Drawing.Size(61, 45);
             this.btnScale.TabIndex = 4;
             this.btnScale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScale.Textcolor = System.Drawing.Color.White;
@@ -138,14 +138,14 @@
             this.btnClose.IconVisible = true;
             this.btnClose.IconZoom = 60D;
             this.btnClose.IsTab = false;
-            this.btnClose.Location = new System.Drawing.Point(861, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(897, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Normalcolor = System.Drawing.Color.Transparent;
             this.btnClose.OnHovercolor = System.Drawing.Color.Silver;
             this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClose.selected = false;
-            this.btnClose.Size = new System.Drawing.Size(61, 51);
+            this.btnClose.Size = new System.Drawing.Size(61, 45);
             this.btnClose.TabIndex = 1;
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Textcolor = System.Drawing.Color.White;
@@ -175,14 +175,14 @@
             this.btnMinimize.IconVisible = true;
             this.btnMinimize.IconZoom = 60D;
             this.btnMinimize.IsTab = false;
-            this.btnMinimize.Location = new System.Drawing.Point(922, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Location = new System.Drawing.Point(958, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Normalcolor = System.Drawing.Color.Transparent;
             this.btnMinimize.OnHovercolor = System.Drawing.Color.Silver;
             this.btnMinimize.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMinimize.selected = false;
-            this.btnMinimize.Size = new System.Drawing.Size(61, 51);
+            this.btnMinimize.Size = new System.Drawing.Size(61, 45);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMinimize.Textcolor = System.Drawing.Color.White;
@@ -215,7 +215,7 @@
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Quality = 10;
-            this.panelLeft.Size = new System.Drawing.Size(217, 720);
+            this.panelLeft.Size = new System.Drawing.Size(181, 720);
             this.panelLeft.TabIndex = 0;
             // 
             // btnSlideMenu
@@ -241,8 +241,8 @@
             this.btnSlideMenu.IconVisible = true;
             this.btnSlideMenu.IconZoom = 60D;
             this.btnSlideMenu.IsTab = true;
-            this.btnSlideMenu.Location = new System.Drawing.Point(143, 0);
-            this.btnSlideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSlideMenu.Location = new System.Drawing.Point(107, 0);
+            this.btnSlideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnSlideMenu.Name = "btnSlideMenu";
             this.btnSlideMenu.Normalcolor = System.Drawing.Color.Transparent;
             this.btnSlideMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -278,7 +278,7 @@
             this.btnLogout.IconZoom = 60D;
             this.btnLogout.IsTab = true;
             this.btnLogout.Location = new System.Drawing.Point(0, 598);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.Transparent;
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -315,7 +315,7 @@
             this.btnUsers.IconZoom = 60D;
             this.btnUsers.IsTab = true;
             this.btnUsers.Location = new System.Drawing.Point(0, 528);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Normalcolor = System.Drawing.Color.Transparent;
             this.btnUsers.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -327,6 +327,7 @@
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Textcolor = System.Drawing.Color.White;
             this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
             // 
             // btnExpenses
             // 
@@ -351,7 +352,7 @@
             this.btnExpenses.IconZoom = 60D;
             this.btnExpenses.IsTab = true;
             this.btnExpenses.Location = new System.Drawing.Point(0, 458);
-            this.btnExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Normalcolor = System.Drawing.Color.Transparent;
             this.btnExpenses.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -387,7 +388,7 @@
             this.btnStorage.IconZoom = 60D;
             this.btnStorage.IsTab = true;
             this.btnStorage.Location = new System.Drawing.Point(0, 388);
-            this.btnStorage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStorage.Margin = new System.Windows.Forms.Padding(4);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.Normalcolor = System.Drawing.Color.Transparent;
             this.btnStorage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -423,7 +424,7 @@
             this.btnDetails.IconZoom = 60D;
             this.btnDetails.IsTab = true;
             this.btnDetails.Location = new System.Drawing.Point(0, 318);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Normalcolor = System.Drawing.Color.Transparent;
             this.btnDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -459,7 +460,7 @@
             this.btnSell.IconZoom = 60D;
             this.btnSell.IsTab = true;
             this.btnSell.Location = new System.Drawing.Point(0, 248);
-            this.btnSell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSell.Margin = new System.Windows.Forms.Padding(4);
             this.btnSell.Name = "btnSell";
             this.btnSell.Normalcolor = System.Drawing.Color.Transparent;
             this.btnSell.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -495,7 +496,7 @@
             this.btnHome.IconZoom = 60D;
             this.btnHome.IsTab = true;
             this.btnHome.Location = new System.Drawing.Point(0, 178);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Normalcolor = System.Drawing.Color.Transparent;
             this.btnHome.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -534,9 +535,9 @@
             // 
             this.panelAnimator.SetDecoration(this.panelControls, BunifuAnimatorNS.DecorationType.None);
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControls.Location = new System.Drawing.Point(217, 51);
+            this.panelControls.Location = new System.Drawing.Point(181, 45);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(983, 669);
+            this.panelControls.Size = new System.Drawing.Size(1019, 675);
             this.panelControls.TabIndex = 6;
             // 
             // Form_Dashboard

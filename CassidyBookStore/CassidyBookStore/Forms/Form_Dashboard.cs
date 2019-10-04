@@ -109,5 +109,11 @@ namespace CassidyBookStore.Forms
             UC_Home uch = new UC_Home();
             AddControlsToPanel(uch);
         }
+
+        private void BtnUsers_Click(object sender, EventArgs e)
+        {
+            UC_Users ucu = new UC_Users();
+            AddControlsToPanel(ucu);
+        }
     }
 }
