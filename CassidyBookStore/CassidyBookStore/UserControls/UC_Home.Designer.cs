@@ -52,20 +52,20 @@
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bunifuProgressBar4 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bunifuProgressBar3 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuProgressBar2 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.label12 = new System.Windows.Forms.Label();
+            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label10 = new System.Windows.Forms.Label();
             this.loadData = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar2 = new Bunifu.Framework.UI.BunifuProgressBar();
-            this.label14 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar3 = new Bunifu.Framework.UI.BunifuProgressBar();
-            this.label15 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar4 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.card1.SuspendLayout();
             this.card2.SuspendLayout();
             this.card4.SuspendLayout();
@@ -500,6 +500,118 @@
             this.bunifuCards2.Size = new System.Drawing.Size(718, 235);
             this.bunifuCards2.TabIndex = 16;
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(385, 193);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 21);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Lorem ipsum";
+            // 
+            // bunifuProgressBar4
+            // 
+            this.bunifuProgressBar4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuProgressBar4.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar4.BorderRadius = 5;
+            this.bunifuProgressBar4.Location = new System.Drawing.Point(22, 203);
+            this.bunifuProgressBar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuProgressBar4.MaximumValue = 100;
+            this.bunifuProgressBar4.Name = "bunifuProgressBar4";
+            this.bunifuProgressBar4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
+            this.bunifuProgressBar4.Size = new System.Drawing.Size(306, 10);
+            this.bunifuProgressBar4.TabIndex = 25;
+            this.bunifuProgressBar4.Value = 50;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(385, 143);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(112, 21);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Lorem ipsum";
+            // 
+            // bunifuProgressBar3
+            // 
+            this.bunifuProgressBar3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuProgressBar3.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar3.BorderRadius = 5;
+            this.bunifuProgressBar3.Location = new System.Drawing.Point(22, 153);
+            this.bunifuProgressBar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuProgressBar3.MaximumValue = 100;
+            this.bunifuProgressBar3.Name = "bunifuProgressBar3";
+            this.bunifuProgressBar3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(255)))), ((int)(((byte)(120)))));
+            this.bunifuProgressBar3.Size = new System.Drawing.Size(306, 10);
+            this.bunifuProgressBar3.TabIndex = 23;
+            this.bunifuProgressBar3.Value = 56;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DimGray;
+            this.label13.Location = new System.Drawing.Point(385, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 21);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Lorem ipsum";
+            // 
+            // bunifuProgressBar2
+            // 
+            this.bunifuProgressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuProgressBar2.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar2.BorderRadius = 5;
+            this.bunifuProgressBar2.Location = new System.Drawing.Point(22, 103);
+            this.bunifuProgressBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuProgressBar2.MaximumValue = 100;
+            this.bunifuProgressBar2.Name = "bunifuProgressBar2";
+            this.bunifuProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
+            this.bunifuProgressBar2.Size = new System.Drawing.Size(306, 10);
+            this.bunifuProgressBar2.TabIndex = 21;
+            this.bunifuProgressBar2.Value = 45;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(385, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(112, 21);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Lorem ipsum";
+            // 
+            // bunifuProgressBar1
+            // 
+            this.bunifuProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
+            this.bunifuProgressBar1.BorderRadius = 5;
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(22, 53);
+            this.bunifuProgressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuProgressBar1.MaximumValue = 100;
+            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
+            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
+            this.bunifuProgressBar1.Size = new System.Drawing.Size(306, 10);
+            this.bunifuProgressBar1.TabIndex = 19;
+            this.bunifuProgressBar1.Value = 85;
+            // 
             // bunifuCircleProgressbar1
             // 
             this.bunifuCircleProgressbar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -513,7 +625,7 @@
             this.bunifuCircleProgressbar1.LabelVisible = true;
             this.bunifuCircleProgressbar1.LineProgressThickness = 8;
             this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(552, 53);
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(541, 53);
             this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuCircleProgressbar1.MaxValue = 100;
             this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
@@ -530,7 +642,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(560, 7);
+            this.label11.Location = new System.Drawing.Point(549, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 23);
             this.label11.TabIndex = 16;
@@ -538,8 +650,7 @@
             // 
             // bunifuSeparator1
             // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
@@ -568,114 +679,6 @@
             this.loadData.Enabled = true;
             this.loadData.Interval = 500;
             this.loadData.Tick += new System.EventHandler(this.LoadData_Tick);
-            // 
-            // bunifuProgressBar1
-            // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(22, 53);
-            this.bunifuProgressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(327, 10);
-            this.bunifuProgressBar1.TabIndex = 19;
-            this.bunifuProgressBar1.Value = 85;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(385, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 21);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Lorem ipsum";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(385, 93);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 21);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Lorem ipsum";
-            // 
-            // bunifuProgressBar2
-            // 
-            this.bunifuProgressBar2.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar2.BorderRadius = 5;
-            this.bunifuProgressBar2.Location = new System.Drawing.Point(22, 103);
-            this.bunifuProgressBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuProgressBar2.MaximumValue = 100;
-            this.bunifuProgressBar2.Name = "bunifuProgressBar2";
-            this.bunifuProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
-            this.bunifuProgressBar2.Size = new System.Drawing.Size(327, 10);
-            this.bunifuProgressBar2.TabIndex = 21;
-            this.bunifuProgressBar2.Value = 45;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(385, 143);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 21);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Lorem ipsum";
-            // 
-            // bunifuProgressBar3
-            // 
-            this.bunifuProgressBar3.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar3.BorderRadius = 5;
-            this.bunifuProgressBar3.Location = new System.Drawing.Point(22, 153);
-            this.bunifuProgressBar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuProgressBar3.MaximumValue = 100;
-            this.bunifuProgressBar3.Name = "bunifuProgressBar3";
-            this.bunifuProgressBar3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(255)))), ((int)(((byte)(120)))));
-            this.bunifuProgressBar3.Size = new System.Drawing.Size(327, 10);
-            this.bunifuProgressBar3.TabIndex = 23;
-            this.bunifuProgressBar3.Value = 56;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(385, 193);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 21);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Lorem ipsum";
-            // 
-            // bunifuProgressBar4
-            // 
-            this.bunifuProgressBar4.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar4.BorderRadius = 5;
-            this.bunifuProgressBar4.Location = new System.Drawing.Point(22, 203);
-            this.bunifuProgressBar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuProgressBar4.MaximumValue = 100;
-            this.bunifuProgressBar4.Name = "bunifuProgressBar4";
-            this.bunifuProgressBar4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
-            this.bunifuProgressBar4.Size = new System.Drawing.Size(327, 10);
-            this.bunifuProgressBar4.TabIndex = 25;
-            this.bunifuProgressBar4.Value = 50;
             // 
             // UC_Home
             // 
