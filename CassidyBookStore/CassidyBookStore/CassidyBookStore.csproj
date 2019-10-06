@@ -118,9 +118,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bunifu DLLs References\BunifuDataViz.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Bunifu DLLs References\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu DLLs References\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -128,6 +127,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -165,12 +165,6 @@
     </Compile>
     <Compile Include="UserControls\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UC_SalesDetails1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UC_SalesDetails1.Designer.cs">
-      <DependentUpon>UC_SalesDetails1.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_SlideUpLogin.cs">
       <SubType>UserControl</SubType>
