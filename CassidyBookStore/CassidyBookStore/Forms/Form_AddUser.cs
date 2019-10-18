@@ -18,15 +18,6 @@ namespace CassidyBookStore.Forms
             (new Core.DropShaddow()).ApplyShadows(this);
         }
 
-        private void BunifuCheckBox3_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
@@ -45,10 +36,7 @@ namespace CassidyBookStore.Forms
             bunifuPages1.SetPage("Info");
         }
 
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void BunifuButton3_Click(object sender, EventArgs e)
         {

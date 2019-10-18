@@ -77,11 +77,6 @@ namespace CassidyBookStore.Forms
             Application.Exit();
         }
 
-        private void BunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -114,6 +109,18 @@ namespace CassidyBookStore.Forms
         {
             UC_Users ucu = new UC_Users();
             AddControlsToPanel(ucu);
+        }
+
+        private void BtnDetails_Click(object sender, EventArgs e)
+        {
+            UC_SaleDetails ucs = new UC_SaleDetails();
+            AddControlsToPanel(ucs);
+        }
+
+        private void BtnSell_Click(object sender, EventArgs e)
+        {
+            UC_Order uco = new UC_Order();
+            AddControlsToPanel(uco);
         }
     }
 }

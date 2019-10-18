@@ -109,6 +109,7 @@
             // 
             // bunifuFlatButton1
             // 
+            this.bunifuFlatButton1.Active = false;
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -167,6 +168,7 @@
             // 
             // bunifuFlatButton2
             // 
+            this.bunifuFlatButton2.Active = false;
             this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -275,6 +277,7 @@
             // 
             // bunifuFlatButton3
             // 
+            this.bunifuFlatButton3.Active = false;
             this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -321,6 +324,7 @@
             // 
             // bunifuFlatButton4
             // 
+            this.bunifuFlatButton4.Active = false;
             this.bunifuFlatButton4.Activecolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -683,6 +687,7 @@
             // UC_Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards1);

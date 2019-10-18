@@ -202,7 +202,6 @@
             this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 9;
             this.label3.Text = "Finish";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // c1
             // 
@@ -464,7 +463,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Info";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // bunifuTextBox5
             // 

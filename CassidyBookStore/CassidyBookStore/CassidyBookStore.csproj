@@ -166,6 +166,18 @@
     <Compile Include="UserControls\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Order.Designer.cs">
+      <DependentUpon>UC_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_SaleDetails.Designer.cs">
+      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_SlideUpLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +210,12 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Order.resx">
+      <DependentUpon>UC_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_SaleDetails.resx">
+      <DependentUpon>UC_SaleDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SlideUpLogin.resx">
       <DependentUpon>UC_SlideUpLogin.cs</DependentUpon>
