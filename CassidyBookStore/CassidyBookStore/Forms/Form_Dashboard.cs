@@ -77,27 +77,7 @@ namespace CassidyBookStore.Forms
             Application.Exit();
         }
 
-        private void BunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void BunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void BunifuFlatButton1_Click_1(object sender, EventArgs e)
-        {
-            if(this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
@@ -121,6 +101,11 @@ namespace CassidyBookStore.Forms
         {
             UC_Order uco = new UC_Order();
             AddControlsToPanel(uco);
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

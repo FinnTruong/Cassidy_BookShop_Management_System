@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnScale = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnMinimize = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelLeft = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnSlideMenu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,8 +46,10 @@
             this.btnHome = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panelControls = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -68,129 +67,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.btnScale);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.bunifuImageButton1);
             this.panelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(181, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1019, 45);
             this.panel1.TabIndex = 5;
-            // 
-            // btnScale
-            // 
-            this.btnScale.Active = false;
-            this.btnScale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnScale.BackColor = System.Drawing.Color.Transparent;
-            this.btnScale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnScale.BorderRadius = 0;
-            this.btnScale.ButtonText = "";
-            this.btnScale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAnimator.SetDecoration(this.btnScale, BunifuAnimatorNS.DecorationType.None);
-            this.btnScale.DisabledColor = System.Drawing.Color.Gray;
-            this.btnScale.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnScale.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnScale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnScale.Iconimage")));
-            this.btnScale.Iconimage_right = null;
-            this.btnScale.Iconimage_right_Selected = null;
-            this.btnScale.Iconimage_Selected = null;
-            this.btnScale.IconMarginLeft = 0;
-            this.btnScale.IconMarginRight = 0;
-            this.btnScale.IconRightVisible = true;
-            this.btnScale.IconRightZoom = 0D;
-            this.btnScale.IconVisible = true;
-            this.btnScale.IconZoom = 60D;
-            this.btnScale.IsTab = false;
-            this.btnScale.Location = new System.Drawing.Point(836, 0);
-            this.btnScale.Margin = new System.Windows.Forms.Padding(4);
-            this.btnScale.Name = "btnScale";
-            this.btnScale.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnScale.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnScale.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnScale.selected = false;
-            this.btnScale.Size = new System.Drawing.Size(61, 45);
-            this.btnScale.TabIndex = 4;
-            this.btnScale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScale.Textcolor = System.Drawing.Color.White;
-            this.btnScale.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScale.Click += new System.EventHandler(this.BunifuFlatButton1_Click_1);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Active = false;
-            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.BorderRadius = 0;
-            this.btnClose.ButtonText = "";
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelAnimator.SetDecoration(this.btnClose, BunifuAnimatorNS.DecorationType.None);
-            this.btnClose.DisabledColor = System.Drawing.Color.Gray;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnClose.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClose.Iconimage")));
-            this.btnClose.Iconimage_right = null;
-            this.btnClose.Iconimage_right_Selected = null;
-            this.btnClose.Iconimage_Selected = null;
-            this.btnClose.IconMarginLeft = 0;
-            this.btnClose.IconMarginRight = 0;
-            this.btnClose.IconRightVisible = true;
-            this.btnClose.IconRightZoom = 0D;
-            this.btnClose.IconVisible = true;
-            this.btnClose.IconZoom = 60D;
-            this.btnClose.IsTab = false;
-            this.btnClose.Location = new System.Drawing.Point(897, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnClose.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnClose.selected = false;
-            this.btnClose.Size = new System.Drawing.Size(61, 45);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Click += new System.EventHandler(this.BunifuFlatButton1_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Active = false;
-            this.btnMinimize.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimize.BorderRadius = 0;
-            this.btnMinimize.ButtonText = "";
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAnimator.SetDecoration(this.btnMinimize, BunifuAnimatorNS.DecorationType.None);
-            this.btnMinimize.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Iconimage")));
-            this.btnMinimize.Iconimage_right = null;
-            this.btnMinimize.Iconimage_right_Selected = null;
-            this.btnMinimize.Iconimage_Selected = null;
-            this.btnMinimize.IconMarginLeft = 0;
-            this.btnMinimize.IconMarginRight = 0;
-            this.btnMinimize.IconRightVisible = true;
-            this.btnMinimize.IconRightZoom = 0D;
-            this.btnMinimize.IconVisible = true;
-            this.btnMinimize.IconZoom = 60D;
-            this.btnMinimize.IsTab = false;
-            this.btnMinimize.Location = new System.Drawing.Point(958, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnMinimize.OnHovercolor = System.Drawing.Color.Silver;
-            this.btnMinimize.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMinimize.selected = false;
-            this.btnMinimize.Size = new System.Drawing.Size(61, 45);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimize.Textcolor = System.Drawing.Color.White;
-            this.btnMinimize.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.Click += new System.EventHandler(this.BunifuFlatButton3_Click);
             // 
             // timer1
             // 
@@ -525,24 +408,24 @@
             // 
             // panelAnimator
             // 
-            this.panelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
+            this.panelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.panelAnimator.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 20;
-            animation2.Padding = new System.Windows.Forms.Padding(30);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.panelAnimator.DefaultAnimation = animation2;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 1F;
+            this.panelAnimator.DefaultAnimation = animation5;
             // 
             // panelControls
             // 
@@ -552,6 +435,21 @@
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(1019, 675);
             this.panelControls.TabIndex = 6;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelAnimator.SetDecoration(this.bunifuImageButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(978, 3);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(38, 36);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton1.TabIndex = 0;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // Form_Dashboard
             // 
@@ -567,6 +465,7 @@
             this.Name = "Form_Dashboard";
             this.panel1.ResumeLayout(false);
             this.panelLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,10 +485,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSell;
         private Bunifu.Framework.UI.BunifuFlatButton btnHome;
         private BunifuAnimatorNS.BunifuTransition panelAnimator;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
-        private Bunifu.Framework.UI.BunifuFlatButton btnMinimize;
-        private Bunifu.Framework.UI.BunifuFlatButton btnScale;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelControls;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }
