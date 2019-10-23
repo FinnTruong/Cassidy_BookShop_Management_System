@@ -194,6 +194,12 @@
     <Compile Include="UserControls\UC_SlideUpLogin.Designer.cs">
       <DependentUpon>UC_SlideUpLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Storage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Storage.Designer.cs">
+      <DependentUpon>UC_Storage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Users.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_SlideUpLogin.resx">
       <DependentUpon>UC_SlideUpLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Storage.resx">
+      <DependentUpon>UC_Storage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Users.resx">
       <DependentUpon>UC_Users.cs</DependentUpon>
