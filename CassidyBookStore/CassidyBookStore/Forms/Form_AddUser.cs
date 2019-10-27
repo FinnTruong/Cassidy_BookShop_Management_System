@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CassidyBookStore.Forms
 {
     public partial class Form_AddUser : Form
     {
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ACER\Desktop\BookStore\Cassidy_BookShop_Management_System\CassidyBookStore\CassidyBookStore\UserData.mdf;Integrated Security=True");
         public Form_AddUser()
         {
             InitializeComponent();
@@ -45,7 +48,29 @@ namespace CassidyBookStore.Forms
 
         private void BunifuButton4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                String UserName = txtUserName.Text;
+                String PassWord = txtPassword.Text;
+                String FirstName = txtFirstName.Text;
+                String Email = txtEmail.Text;
+                long Phone = Int64.Parse(txtPhone.Text);
+                long ID = Int64.Parse(txtID.Text);
+                String Role = txtRole.Text;
+                String LastName = txtLastName.Text;
+                con.Open();
+                String qry = "insert into Users(UserName,Password,FirstName,Email,Phone,ID,Role,LastName) values('" + UserName + "', '" + PassWord + "','" + FirstName + "','" + Email + "'," + Phone + "," + ID + ",'" + Role + "','" + LastName + "')";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                int i = cmd.ExecuteNonQuery();
+                if (i > 1)
+                    MessageBox.Show(i + "Number of User Registered With UserName:" + UserName);
+                else
+                    MessageBox.Show("User registration failed with username:" + UserName);
+            }
+            catch (System.Exception exp)
+            {
+                MessageBox.Show("Some Error Occucred at User Registration: " + exp.ToString());
+            }
         }
 
         private void BunifuPages1_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,5 +87,7 @@ namespace CassidyBookStore.Forms
                     break;
             }
         }
+
+
     }
 }
