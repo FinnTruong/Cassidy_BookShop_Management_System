@@ -113,5 +113,11 @@ namespace CassidyBookStore.Forms
             UC_Storage ucs = new UC_Storage();
             AddControlsToPanel(ucs);
         }
+
+        private void btnExpenses_Click(object sender, EventArgs e)
+        {
+            UC_Expenses uce = new UC_Expenses();
+            AddControlsToPanel(uce);
+        }
     }
 }

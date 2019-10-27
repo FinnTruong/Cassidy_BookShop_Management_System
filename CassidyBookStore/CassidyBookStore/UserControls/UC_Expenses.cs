@@ -11,23 +11,28 @@ using CassidyBookStore.Forms;
 
 namespace CassidyBookStore.UserControls
 {
-    public partial class UC_Storage : UserControl
+    public partial class UC_Expenses : UserControl
     {
-        public UC_Storage()
+        public UC_Expenses()
         {
             InitializeComponent();
+            PopulateDataGrid();
         }
 
-        private void UC_Storage_Load(object sender, EventArgs e)
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            PopulateDataGrid();
+            using (Form_AddExpense form = new Form_AddExpense())
+            {
+                form.ShowDialog();
+            }
         }
 
         void PopulateDataGrid()
         {
             for (int i = 0; i < 50; i++)
             {
-                bunifuDataGridView1.Rows.Add(
+                dgvExpense.Rows.Add(
                     new object[]
                     {
                     "1",
@@ -39,16 +44,6 @@ namespace CassidyBookStore.UserControls
                     }
                     );
             }
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
-        {
-            using (Form_AddBook form = new Form_AddBook())
-            {
-                form.ShowDialog();
-            }
-            PopulateDataGrid();
-
         }
     }
 }

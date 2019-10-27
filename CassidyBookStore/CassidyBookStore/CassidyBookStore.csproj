@@ -156,6 +156,18 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AddBook.Designer.cs">
+      <DependentUpon>Form_AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_AddExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_AddExpense.Designer.cs">
+      <DependentUpon>Form_AddExpense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="transparentBg1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transparentBg1.designer.cs">
+      <DependentUpon>transparentBg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Expenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Expenses.Designer.cs">
+      <DependentUpon>UC_Expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +233,12 @@
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AddBook.resx">
+      <DependentUpon>Form_AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_AddExpense.resx">
+      <DependentUpon>Form_AddExpense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_AddUser.resx">
       <DependentUpon>Form_AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +254,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="transparentBg1.resx">
+      <DependentUpon>transparentBg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Expenses.resx">
+      <DependentUpon>UC_Expenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -144,7 +144,7 @@
             this.btnSlideMenu.IconZoom = 60D;
             this.btnSlideMenu.IsTab = true;
             this.btnSlideMenu.Location = new System.Drawing.Point(107, 0);
-            this.btnSlideMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSlideMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnSlideMenu.Name = "btnSlideMenu";
             this.btnSlideMenu.Normalcolor = System.Drawing.Color.Transparent;
             this.btnSlideMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -181,7 +181,7 @@
             this.btnLogout.IconZoom = 60D;
             this.btnLogout.IsTab = true;
             this.btnLogout.Location = new System.Drawing.Point(0, 598);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.Transparent;
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -219,7 +219,7 @@
             this.btnUsers.IconZoom = 60D;
             this.btnUsers.IsTab = true;
             this.btnUsers.Location = new System.Drawing.Point(0, 528);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Normalcolor = System.Drawing.Color.Transparent;
             this.btnUsers.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -257,7 +257,7 @@
             this.btnExpenses.IconZoom = 60D;
             this.btnExpenses.IsTab = true;
             this.btnExpenses.Location = new System.Drawing.Point(0, 458);
-            this.btnExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Normalcolor = System.Drawing.Color.Transparent;
             this.btnExpenses.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -269,6 +269,7 @@
             this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExpenses.Textcolor = System.Drawing.Color.White;
             this.btnExpenses.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
             // 
             // btnStorage
             // 
@@ -294,7 +295,7 @@
             this.btnStorage.IconZoom = 60D;
             this.btnStorage.IsTab = true;
             this.btnStorage.Location = new System.Drawing.Point(0, 388);
-            this.btnStorage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStorage.Margin = new System.Windows.Forms.Padding(4);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.Normalcolor = System.Drawing.Color.Transparent;
             this.btnStorage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -332,7 +333,7 @@
             this.btnDetails.IconZoom = 60D;
             this.btnDetails.IsTab = true;
             this.btnDetails.Location = new System.Drawing.Point(0, 318);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Normalcolor = System.Drawing.Color.Transparent;
             this.btnDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -370,7 +371,7 @@
             this.btnSell.IconZoom = 60D;
             this.btnSell.IsTab = true;
             this.btnSell.Location = new System.Drawing.Point(0, 248);
-            this.btnSell.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSell.Margin = new System.Windows.Forms.Padding(4);
             this.btnSell.Name = "btnSell";
             this.btnSell.Normalcolor = System.Drawing.Color.Transparent;
             this.btnSell.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -408,7 +409,7 @@
             this.btnHome.IconZoom = 60D;
             this.btnHome.IsTab = true;
             this.btnHome.Location = new System.Drawing.Point(0, 178);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Normalcolor = System.Drawing.Color.Transparent;
             this.btnHome.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
@@ -426,22 +427,22 @@
             // 
             this.panelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.panelAnimator.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.panelAnimator.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.panelAnimator.DefaultAnimation = animation2;
             // 
             // panelControls
             // 
@@ -464,6 +465,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelLeft.ResumeLayout(false);
