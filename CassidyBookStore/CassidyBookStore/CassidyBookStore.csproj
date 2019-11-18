@@ -150,11 +150,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\DropShaddow.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BookDAO.cs" />
+    <Compile Include="DAO\CartDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\OrderDAO.cs" />
+    <Compile Include="DTO\Book.cs" />
+    <Compile Include="DTO\Cart.cs" />
+    <Compile Include="DTO\Order.cs" />
+    <Compile Include="Forms\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_AddBook.cs">
       <SubType>Form</SubType>
@@ -182,6 +190,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="transparentBg1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,8 +243,8 @@
     <Compile Include="UserControls\UC_Users.Designer.cs">
       <DependentUpon>UC_Users.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_AddBook.resx">
       <DependentUpon>Form_AddBook.cs</DependentUpon>
@@ -288,10 +301,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLNSDataSet.xsc">
+      <DependentUpon>QLNSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNSDataSet.xss">
+      <DependentUpon>QLNSDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

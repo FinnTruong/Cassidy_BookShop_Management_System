@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CassidyBookStore.Forms;
+using CassidyBookStore.DAO;
 
 namespace CassidyBookStore
 {
@@ -29,12 +30,14 @@ namespace CassidyBookStore
         //LOG IN
         private void Login()
         {
-            if(textBox1.Text == "Finn" && textBox2.Text =="pass123")
-            {
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+            if(AccountDAO.Instance.Login(username, password))
+            { 
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 timer2.Enabled = true;
-                label4.Text = "Welcome back " + textBox1.Text;
+                label4.Text = "Welcome back " + AccountDAO.Instance.ReturnUsersFirstName(username,password);
                 label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
             }  
             else
@@ -44,6 +47,7 @@ namespace CassidyBookStore
                 MessageBox.Show("Your username or password is incorrect");
             }
         }
+
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
@@ -66,6 +70,7 @@ namespace CassidyBookStore
                 Login();
             }
         }
+
 
 
         //Panel 1 Slide Up Timer

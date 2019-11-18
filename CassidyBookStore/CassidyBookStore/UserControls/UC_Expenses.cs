@@ -30,20 +30,8 @@ namespace CassidyBookStore.UserControls
 
         void PopulateDataGrid()
         {
-            for (int i = 0; i < 50; i++)
-            {
-                dgvExpense.Rows.Add(
-                    new object[]
-                    {
-                    "1",
-                    "Test",
-                    "Test",
-                    "100",
-                    "20",
-                    "120"
-                    }
-                    );
-            }
+
         }
+
     }
 }

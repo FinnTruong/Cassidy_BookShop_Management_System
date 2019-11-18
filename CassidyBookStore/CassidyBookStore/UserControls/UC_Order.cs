@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CassidyBookStore.DTO;
+using CassidyBookStore.DAO;
+using System.Globalization;
 
 namespace CassidyBookStore.UserControls
 {
     public partial class UC_Order : UserControl
     {
+
+        int totalPrice = 0;
         public UC_Order()
         {
             InitializeComponent();
@@ -47,6 +52,61 @@ namespace CassidyBookStore.UserControls
         private void btn_EditAddress_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage("Customer");
+        }
+
+        private void btn_AddToCart_Click(object sender, EventArgs e)
+        {
+            ShowCart();
+        }
+
+        void ShowCart()
+        {
+            List<Cart> listCart = CartDAO.Instance.GetListCartByTable();            
+
+            foreach (Cart item in listCart)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.BookTitle.ToString());
+                lsvItem.SubItems.Add(item.Quantity.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString());
+                lsvItem.SubItems.Add(item.Total.ToString());
+                totalPrice += item.Total;
+
+                lsvCart.Items.Add(lsvItem);
+            }
+
+            CultureInfo culture = new CultureInfo("en-US");
+
+            txt_Amount.Text = totalPrice.ToString("c",culture);
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            totalPrice = 0;
+            txt_Amount.Text = totalPrice.ToString("c");
+            lsvCart.Items.Clear();
+        }
+
+        void ClearInfo()
+        {
+            txtBookTitle.Clear();
+            txtAuthor.Clear();
+            txtStock.Clear();
+            txtPrice.Clear();
+            txtRemain.Clear();
+        }
+
+        private void txt_ID_TextChanged(object sender, EventArgs e)
+        {
+            ClearInfo();
+            int num;
+            if (int.TryParse(txtID.Text, out num) && BookDAO.Instance.IsAcceptedID(int.Parse(txtID.Text)))
+            {
+                int id = int.Parse(txtID.Text);
+                txtBookTitle.Text = BookDAO.Instance.GetBookTitle(id);
+                txtAuthor.Text = BookDAO.Instance.GetAuthor(id);
+                txtStock.Text = BookDAO.Instance.GetStock(id);
+                txtPrice.Text = BookDAO.Instance.GetPrice(id);
+            }                       
         }
     }
 }

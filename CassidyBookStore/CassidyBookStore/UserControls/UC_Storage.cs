@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CassidyBookStore.Forms;
+using System.Data.SqlClient;
+using CassidyBookStore.DAO;
 
 namespace CassidyBookStore.UserControls
 {
@@ -16,7 +18,9 @@ namespace CassidyBookStore.UserControls
         public UC_Storage()
         {
             InitializeComponent();
+            
         }
+        
 
         private void UC_Storage_Load(object sender, EventArgs e)
         {
@@ -25,20 +29,9 @@ namespace CassidyBookStore.UserControls
 
         void PopulateDataGrid()
         {
-            for (int i = 0; i < 50; i++)
-            {
-                bunifuDataGridView1.Rows.Add(
-                    new object[]
-                    {
-                    "1",
-                    "Test",
-                    "Test",
-                    "100",
-                    "20",
-                    "120"
-                    }
-                    );
-            }
+            string query = "SELECT * FROM BOOKS";   
+
+            dtgvBooks.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
