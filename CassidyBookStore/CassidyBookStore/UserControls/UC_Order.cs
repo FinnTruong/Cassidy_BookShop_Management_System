@@ -16,11 +16,13 @@ namespace CassidyBookStore.UserControls
     public partial class UC_Order : UserControl
     {
 
-        int totalPrice = 0;
+        float totalPrice = 0;
+        int curOrderID = -1;
         public UC_Order()
         {
             InitializeComponent();
-            
+            curOrderID = OrderDAO.Instance.GetMaxIDOrder();
+            ShowCart();
         }
 
         private void btn_NextProfile_Click(object sender, EventArgs e)
@@ -56,14 +58,41 @@ namespace CassidyBookStore.UserControls
 
         private void btn_AddToCart_Click(object sender, EventArgs e)
         {
-            ShowCart();
+            try
+            {
+                int orderID = curOrderID;
+                int bookID = int.Parse(txtID.Text);
+                int quantity = int.Parse(txtQuantity.Text);
+                float price = float.Parse(txtPrice.Text);
+
+                if (orderID < 1) //chua ton tai order
+                {
+                    OrderDAO.Instance.AddNewOrder();
+                    CartItemDAO.Instance.AddToCart(OrderDAO.Instance.GetMaxIDOrder(), bookID, quantity, price);
+                    curOrderID = OrderDAO.Instance.GetMaxIDOrder();
+                }
+                else //da ton tai
+                {
+                    CartItemDAO.Instance.AddToCart(orderID, bookID, quantity, price);
+                }
+
+                ShowCart();
+                UpdateStorage();
+                ClearAll();
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Info");
+            }
         }
 
         void ShowCart()
         {
-            List<Cart> listCart = CartDAO.Instance.GetListCartByTable();            
+            lsvCart.Items.Clear();
+            
+            List<CartItem> listCart = CartItemDAO.Instance.GetListCartByOrder(curOrderID);            
 
-            foreach (Cart item in listCart)
+            foreach (CartItem item in listCart)
             {
                 ListViewItem lsvItem = new ListViewItem(item.BookTitle.ToString());
                 lsvItem.SubItems.Add(item.Quantity.ToString());
@@ -74,16 +103,15 @@ namespace CassidyBookStore.UserControls
                 lsvCart.Items.Add(lsvItem);
             }
 
-            CultureInfo culture = new CultureInfo("en-US");
-
-            txt_Amount.Text = totalPrice.ToString("c",culture);
+            txt_Amount.Text = totalPrice.ToString();
         }
 
-        private void bunifuButton3_Click(object sender, EventArgs e)
+        private void btnClearCart_Click(object sender, EventArgs e)
         {
             totalPrice = 0;
-            txt_Amount.Text = totalPrice.ToString("c");
+            txt_Amount.Text = "";
             lsvCart.Items.Clear();
+
         }
 
         void ClearInfo()
@@ -92,7 +120,14 @@ namespace CassidyBookStore.UserControls
             txtAuthor.Clear();
             txtStock.Clear();
             txtPrice.Clear();
+            txtQuantity.Clear();
             txtRemain.Clear();
+        }
+
+        void ClearAll()
+        {
+            txtID.Clear();
+            ClearInfo();
         }
 
         private void txt_ID_TextChanged(object sender, EventArgs e)
@@ -108,5 +143,55 @@ namespace CassidyBookStore.UserControls
                 txtPrice.Text = BookDAO.Instance.GetPrice(id);
             }                       
         }
+
+        private void GetRemain(object sender, EventArgs e)
+        {
+            int num;
+            if (int.TryParse(txtQuantity.Text, out num) && int.TryParse(txtStock.Text, out num))
+            {
+                int stock = int.Parse(txtStock.Text);
+                int quantity = int.Parse(txtQuantity.Text);
+                int remain = stock - quantity;
+                if (remain >= 0)
+                    txtRemain.Text = remain.ToString();
+                else
+                {
+                    MessageBox.Show("Not enough books");
+                    txtQuantity.Clear();
+                }
+            }
+            else
+                txtRemain.Text = "";
+        }
+
+        void UpdateStorage()
+        {
+            int bookID = int.Parse(txtID.Text);
+            int remain = int.Parse(txtRemain.Text);
+            BookDAO.Instance.UpdateStorage(bookID, remain);
+        }
+
+        private void GetTotal(object sender, EventArgs e)
+        {
+            lb_Amount.Text = float.Parse(txt_Amount.Text).ToString("c",new CultureInfo("en-US"));
+            float num;
+            if (float.TryParse(txt_Discount.Text, out num)) //Discount is float
+            {
+                float amount = float.Parse(txt_Amount.Text);
+                float discount = float.Parse(txt_Discount.Text);
+                float total = amount - discount;
+                if (total >= 0)
+                    lb_Amount.Text = total.ToString("c", new CultureInfo("en-US"));
+
+                else //Discount > Amount
+                {
+                    MessageBox.Show("Invalid");
+                    txt_Discount.Clear();
+                }
+            }
+                     
+        }
+
+ 
     }
 }

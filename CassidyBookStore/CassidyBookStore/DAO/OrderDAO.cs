@@ -34,7 +34,23 @@ namespace CassidyBookStore.DAO
 
             return listOrder;
         }
-           
 
+        public void AddNewOrder()
+        {
+            DataProvider.Instance.ExecuteQuery("EXEC USP_AddNewOrder");
+        }
+
+        public int GetMaxIDOrder()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(ID) FROM ORDERS");
+            }
+            //Khong ton tai ID Order nao
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace CassidyBookStore.DAO
 
         public string GetStock(int id)
         {
-            string query = "SELECT QUANTITY FROM BOOKS WHERE ID = " + id;
+            string query = "SELECT STOCK FROM BOOKS WHERE ID = " + id;
 
             object result = DataProvider.Instance.ExecuteScalar(query);
 
@@ -73,5 +73,35 @@ namespace CassidyBookStore.DAO
             return result.ToString();
         }
 
+        public void UpdateStorage(int bookID, int remain)
+        {
+            string query = "USP_UpdateStorage @bookID , @bookSold";
+            DataProvider.Instance.ExecuteQuery(query, new object[] { bookID, remain });
+        }
+
+        public bool InsertBook(string bookTitle, string author, int stock, float cost, float price)
+        {
+            string query = string.Format("INSERT INTO BOOKS(BOOKTITLE, AUTHOR, STOCK, COST, PRICE) VALUES ('{0}', '{1}', {2}, {3}, {4})",bookTitle, author, stock ,cost, price);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateBook(int bookID, string bookTitle, string author, int stock, float cost, float price)
+        {
+            string query = string.Format("UPDATE BOOKS SET BOOKTITLE = '{0}', AUTHOR = '{1}', STOCK = {2}, COST = {3}, PRICE = {4} WHERE ID= {5}", bookTitle, author, stock, cost, price, bookID);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool DeleteBook(int bookID)
+        {
+            CartItemDAO.Instance.DeleteCartItemByBookID(bookID);
+            string query = "DELETE FROM BOOKS WHERE ID = " + bookID;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

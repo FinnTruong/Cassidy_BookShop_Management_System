@@ -7,35 +7,35 @@ using System.Threading.Tasks;
 
 namespace CassidyBookStore.DTO
 {
-    public class Cart
+    public class CartItem
     {
-        public Cart(string bookTitle, int quantity, int price, int total = 0)
+        public CartItem(string bookTitle, int quantity, int price)
         {
             this.BookTitle = bookTitle;
             this.Quantity = quantity;
             this.Price = price;
-            this.Total = total;
+            this.Total = quantity * price;
         }
 
-        public Cart(DataRow row)
+        public CartItem(DataRow row)
         {
             this.BookTitle = row["bookTitle"].ToString();
             this.Quantity = (int)row["quantity"];
-            this.Price = (int)row["price"];
-            this.Total = (int)row["total"];
+            this.Price = float.Parse(row["price"].ToString());
+            this.Total = float.Parse(row["total"].ToString());
         }
 
         private string bookTitle;
 
         private int quantity;
 
-        private int price;
+        private float price;
 
-        private int total;
+        private float total;
 
         public string BookTitle { get => bookTitle; set => bookTitle = value; }
         public int Quantity { get => quantity; set => quantity = value; }
-        public int Price { get => price; set => price = value; }
-        public int Total { get => total; set => total = value; }
+        public float Price { get => price; set => price = value; }
+        public float Total { get => total; set => total = value; }
     }
 }

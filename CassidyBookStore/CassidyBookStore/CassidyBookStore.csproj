@@ -152,11 +152,11 @@
     <Compile Include="Core\DropShaddow.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BookDAO.cs" />
-    <Compile Include="DAO\CartDAO.cs" />
+    <Compile Include="DAO\CartItemDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DTO\Book.cs" />
-    <Compile Include="DTO\Cart.cs" />
+    <Compile Include="DTO\CartItem.cs" />
     <Compile Include="DTO\Order.cs" />
     <Compile Include="Forms\Form_Login.cs">
       <SubType>Form</SubType>
