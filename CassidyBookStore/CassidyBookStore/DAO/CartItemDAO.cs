@@ -39,10 +39,37 @@ namespace CassidyBookStore.DAO
         {
             DataProvider.Instance.ExecuteNonQuery("USP_AddToCart @orderID , @bookID , @quantity , @price", new object[] { orderID, bookID, quantity, price });
         }
-
+        
         public void DeleteCartItemByBookID(int id)
         {
             DataProvider.Instance.ExecuteQuery("DELETE FROM CART WHERE BOOKID = " + id);
+        }
+
+        //Clear Cart When Press Clear All Button
+        public void ClearAllCartItem(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("DELETE FROM CART WHERE ORDERID = " + id);
+        }
+
+        public float GetCartTotalByOrder(int id)
+        {
+            try
+            {
+                object result = DataProvider.Instance.ExecuteScalar("SELECT SUM(TOTAL) FROM CART WHERE ORDERID = " + id);
+                return float.Parse(result.ToString());
+            }  
+            catch
+            {
+                return 0;
+            }
+                                  
+        }
+
+        public bool IsCartEmpty(int orderID)
+        {
+            string query = "SELECT * FROM CART WHERE ORDERID = " + orderID;
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count == 0;            
         }
     }
 }

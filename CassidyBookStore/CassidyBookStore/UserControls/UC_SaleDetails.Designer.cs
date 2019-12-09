@@ -31,23 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SaleDetails));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.label20 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuDataViz1 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
@@ -64,6 +58,13 @@
             this.bunifuDataViz2 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label10 = new System.Windows.Forms.Label();
             this.loadData = new System.Windows.Forms.Timer(this.components);
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -79,7 +80,8 @@
             this.bunifuCards1.BackColor = System.Drawing.Color.White;
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.White;
+            this.bunifuCards1.color = System.Drawing.Color.DarkOrange;
+            this.bunifuCards1.Controls.Add(this.label20);
             this.bunifuCards1.Controls.Add(this.label11);
             this.bunifuCards1.Controls.Add(this.label3);
             this.bunifuCards1.Controls.Add(this.label2);
@@ -90,8 +92,20 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 40;
-            this.bunifuCards1.Size = new System.Drawing.Size(226, 335);
+            this.bunifuCards1.Size = new System.Drawing.Size(242, 335);
             this.bunifuCards1.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.label20.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label20.Location = new System.Drawing.Point(11, 50);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(216, 32);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Catcher In The Rye";
             // 
             // label11
             // 
@@ -137,9 +151,9 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 25);
+            this.label1.Size = new System.Drawing.Size(163, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Book of the Week";
+            this.label1.Text = "Book of the Week:";
             // 
             // bunifuCards2
             // 
@@ -169,47 +183,14 @@
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 40;
-            this.bunifuCards2.Size = new System.Drawing.Size(731, 335);
+            this.bunifuCards2.Size = new System.Drawing.Size(730, 335);
             this.bunifuCards2.TabIndex = 3;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label16.Location = new System.Drawing.Point(626, 232);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 21);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "1000";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label15.Location = new System.Drawing.Point(626, 163);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 21);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "2000";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label14.Location = new System.Drawing.Point(626, 98);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 21);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "1000";
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(197)))), ((int)(((byte)(176)))));
-            this.panel2.Location = new System.Drawing.Point(384, 50);
+            this.panel2.Location = new System.Drawing.Point(383, 50);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(15, 13);
             this.panel2.TabIndex = 18;
@@ -218,7 +199,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Location = new System.Drawing.Point(285, 50);
+            this.panel1.Location = new System.Drawing.Point(284, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(15, 13);
             this.panel1.TabIndex = 17;
@@ -229,7 +210,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(404, 44);
+            this.label13.Location = new System.Drawing.Point(403, 44);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 19);
@@ -242,7 +223,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(309, 45);
+            this.label12.Location = new System.Drawing.Point(308, 45);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(58, 19);
@@ -255,7 +236,7 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(696, 3);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(695, 3);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(32, 35);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,59 +244,6 @@
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 5;
             this.bunifuImageButton2.Click += new System.EventHandler(this.BunifuImageButton2_Click);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(527, 234);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 19);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Total Expenses";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(527, 166);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 19);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Total Income";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(527, 101);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Profits:";
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(512, 89);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(10, 183);
-            this.bunifuSeparator1.TabIndex = 10;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = true;
             // 
             // label6
             // 
@@ -350,10 +278,10 @@
             0,
             0});
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuDataViz1.Location = new System.Drawing.Point(14, 71);
+            this.bunifuDataViz1.Location = new System.Drawing.Point(14, -12);
             this.bunifuDataViz1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(490, 239);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(981, 322);
             this.bunifuDataViz1.TabIndex = 1;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme2;
             this.bunifuDataViz1.Title = "";
@@ -445,7 +373,7 @@
             this.bunifuCards4.BackColor = System.Drawing.Color.White;
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = true;
-            this.bunifuCards4.color = System.Drawing.Color.White;
+            this.bunifuCards4.color = System.Drawing.Color.OrangeRed;
             this.bunifuCards4.Controls.Add(this.bunifuSeparator2);
             this.bunifuCards4.Controls.Add(this.bunifuSeparator3);
             this.bunifuCards4.Controls.Add(this.label5);
@@ -513,7 +441,7 @@
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 40;
-            this.bunifuCards6.Size = new System.Drawing.Size(374, 254);
+            this.bunifuCards6.Size = new System.Drawing.Size(391, 254);
             this.bunifuCards6.TabIndex = 8;
             // 
             // bunifuDataViz2
@@ -540,7 +468,7 @@
             this.bunifuDataViz2.Location = new System.Drawing.Point(4, 50);
             this.bunifuDataViz2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
-            this.bunifuDataViz2.Size = new System.Drawing.Size(352, 191);
+            this.bunifuDataViz2.Size = new System.Drawing.Size(369, 191);
             this.bunifuDataViz2.TabIndex = 9;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme2;
             this.bunifuDataViz2.Title = "";
@@ -564,6 +492,92 @@
             this.loadData.Interval = 500;
             this.loadData.Tick += new System.EventHandler(this.LoadData_Tick);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(525, 88);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(10, 183);
+            this.bunifuSeparator1.TabIndex = 10;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = true;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(540, 100);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 19);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Total Income:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(540, 165);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 19);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Total Expense:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label9.ForeColor = System.Drawing.Color.Gray;
+            this.label9.Location = new System.Drawing.Point(540, 233);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 19);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Profits:";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label14.Location = new System.Drawing.Point(648, 97);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 21);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "1000";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label15.Location = new System.Drawing.Point(648, 162);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 21);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "2000";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label16.Location = new System.Drawing.Point(648, 231);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 21);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "1000";
+            // 
             // UC_SaleDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +591,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_SaleDetails";
             this.Size = new System.Drawing.Size(1019, 675);
+            this.Load += new System.EventHandler(this.UC_SaleDetails_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.bunifuCards2.ResumeLayout(false);
@@ -600,15 +615,11 @@
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
         private System.Windows.Forms.Label label10;
@@ -619,14 +630,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.DataViz.WinForms.BunifuDataViz bunifuDataViz2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }

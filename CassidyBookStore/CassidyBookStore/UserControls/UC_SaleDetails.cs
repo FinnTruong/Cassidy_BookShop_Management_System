@@ -28,28 +28,41 @@ namespace CassidyBookStore.UserControls
             var cnv = new Bunifu.DataViz.WinForms.Canvas();
             var dataPoint = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_line);
             var dataPoint2 = new Bunifu.DataViz.WinForms.DataPoint(Bunifu.DataViz.WinForms.BunifuDataViz._type.Bunifu_line);
-
-            dataPoint.addLabely("Mon", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Tue", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Wed", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Thu", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Fri", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Sat", rand.Next(0, 500).ToString());
-            dataPoint.addLabely("Sun", rand.Next(0, 500).ToString());
-
-            dataPoint2.addLabely("Mon", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Tue", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Wed", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Thu", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Fri", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Sat", rand.Next(0, 500).ToString());
-            dataPoint2.addLabely("Sun", rand.Next(0, 500).ToString());
-
-
-            cnv.addData(dataPoint);
-            cnv.addData(dataPoint2);
             bunifuDataViz1.colorSet.Add(Color.FromArgb(49, 197, 176));
             bunifuDataViz1.colorSet.Add(Color.Yellow);
+
+            dataPoint.addLabely("Jan", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Feb", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Mar", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Apr", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("May", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Jun", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Jul", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Aug", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Sep", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Oct", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Nov", rand.Next(0, 500).ToString());
+            dataPoint.addLabely("Dec", rand.Next(0, 500).ToString());
+            cnv.addData(dataPoint);
+
+
+            dataPoint2.addLabely("Jan", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Feb", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Mar", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Apr", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("May", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Jun", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Jul", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Aug", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Sep", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Oct", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Nov", rand.Next(0, 500).ToString());
+            dataPoint2.addLabely("Dec", rand.Next(0, 500).ToString());
+
+
+
+            cnv.addData(dataPoint2);
+
             bunifuDataViz1.Render(cnv);
 
         }
@@ -93,6 +106,11 @@ namespace CassidyBookStore.UserControls
         }
 
         private void BunifuDataViz2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_SaleDetails_Load(object sender, EventArgs e)
         {
 
         }

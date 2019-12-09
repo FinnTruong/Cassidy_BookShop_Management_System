@@ -29,30 +29,7 @@ namespace CassidyBookStore.Forms
             panelControls.Controls.Clear();
             panelControls.Controls.Add(c);
         }
-       
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            if(isCollapsed)
-            {
-                panelLeft.Width += 10;
-                if(panelLeft.Width >= panelWidth)
-                {
-                    timer1.Stop();
-                    isCollapsed = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                panelLeft.Width -= 10;
-                if(panelLeft.Width <= 65)
-                {
-                    timer1.Stop();
-                    isCollapsed = true;
-                    this.Refresh();
-                }
-            }
-        }
+
 
         private void BtnSlideMenu_Click(object sender, EventArgs e)
         {
@@ -118,6 +95,12 @@ namespace CassidyBookStore.Forms
         {
             UC_Expenses uce = new UC_Expenses();
             AddControlsToPanel(uce);
+        }
+
+        private void btnOrderInfo_Click(object sender, EventArgs e)
+        {
+            UC_History uch = new UC_History();
+            AddControlsToPanel(uch);
         }
     }
 }

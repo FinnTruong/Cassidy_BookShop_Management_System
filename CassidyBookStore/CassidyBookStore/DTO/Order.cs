@@ -9,40 +9,42 @@ namespace CassidyBookStore.DTO
 {
     public class Order
     {
-        public Order(int id, int bookID, int customersID, DateTime? date, float discount, float total)
+        public Order(int id,  string customer, DateTime? date, float total, int status)
         {
             this.Id = id;
-            this.CustomersID = customersID;
+            this.Customer = customer;
             this.Date = date;
-            this.Discount = discount;
             this.Total = total;
+            this.Status = status;
         }
 
         public Order(DataRow row)
         {
             this.Id = (int)row["id"];
-            this.CustomersID = (int)row["customersID"];
-            this.Date = (DateTime?)row["date"];
-            this.Discount = float.Parse(row["discount"].ToString());
+            this.Customer = row["fullname"].ToString();
+            this.Date = (DateTime?)row["date"];  
             this.Total = float.Parse(row["total"].ToString());
+            this.Status = (int)row["status"];
         }
 
 
         public int Id { get => id; set => id = value; }
-        public int CustomersID { get => customersID; set => customersID = value; }
+
+        public string Customer { get => customer; set => customer = value; }
         public DateTime? Date { get => date; set => date = value; }
         public float Total { get => total; set => total = value; }
-        public float Discount { get => discount; set => discount = value; }
+
+        public int Status { get => status; set => status = value; }
 
         private int id;
 
-        private int customersID;
+        private string customer;
 
         private DateTime? date;
 
         private float total;
 
-        private float discount;
+        private int status;
 
     }
 }

@@ -32,19 +32,26 @@ namespace CassidyBookStore
         {
             string username = textBox1.Text;
             string password = textBox2.Text;
-            if(AccountDAO.Instance.Login(username, password))
-            { 
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                timer2.Enabled = true;
-                label4.Text = "Welcome back " + AccountDAO.Instance.ReturnUsersFirstName(username,password);
-                label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
-            }  
-            else
+            try
             {
-                textBox1.Text = "";
-                textBox2.Text = "";
-                MessageBox.Show("Your username or password is incorrect");
+                if (AccountDAO.Instance.Login(username, password))
+                {
+                    textBox1.Enabled = false;
+                    textBox2.Enabled = false;
+                    timer2.Enabled = true;
+                    label4.Text = "Welcome back " + AccountDAO.Instance.ReturnUsersFirstName(username, password);
+                    label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
+                }
+                else
+                {
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    MessageBox.Show("Your username or password is incorrect");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Login Failed");
             }
         }
 
@@ -77,7 +84,7 @@ namespace CassidyBookStore
         private void Timer1_Tick(object sender, EventArgs e)
         {
             waiter++;
-            if (waiter > 150)
+            if (waiter > 50)
             {
                 panel1_y -= 6;
                 panel1.Size = new Size(panel1.Size.Width, panel1_y);

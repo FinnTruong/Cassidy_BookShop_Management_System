@@ -20,6 +20,7 @@ namespace CassidyBookStore.UserControls
         public UC_Storage()
         {
             InitializeComponent();
+            
         }
         
 
@@ -30,10 +31,10 @@ namespace CassidyBookStore.UserControls
 
         void PopulateDataGrid()
         {
-            string query = "SELECT * FROM BOOKS";   
-
-            dtgvBooks.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            dtgvBooks.ClearSelection();
+            //Consider search text box is empty, SearchBookByName method will return all books in database
+            //Therefore, it's not necessary to run 'SELECT * FROM BOOKS' query
+            dtgvBooks.DataSource = SearchBookByName(txtSearch.Text); 
+            dtgvBooks.ClearSelection();            
         }
 
         private void btnAddNewBook_Click(object sender, EventArgs e)
@@ -77,6 +78,17 @@ namespace CassidyBookStore.UserControls
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private List<Book> SearchBookByName(string name)
+        {
+            List<Book> listBook = BookDAO.Instance.SearchBookByName(name);
+            return listBook;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dtgvBooks.DataSource = SearchBookByName(txtSearch.Text);
         }
     }
 }
