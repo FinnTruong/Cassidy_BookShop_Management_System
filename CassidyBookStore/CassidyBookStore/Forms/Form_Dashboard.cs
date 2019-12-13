@@ -21,6 +21,7 @@ namespace CassidyBookStore.Forms
             InitializeComponent();
             panelWidth = panelLeft.Width;
             isCollapsed = false;
+            AddControlsToPanel(new UC_Home());
         }
 
         private void AddControlsToPanel(Control c)

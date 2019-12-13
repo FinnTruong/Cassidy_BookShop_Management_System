@@ -161,5 +161,19 @@ namespace CassidyBookStore.DAO
             return (int)result;
         }
 
+        public string GetBestSeller()
+        {
+            string query = "SELECT TOP 1 B.BOOKTITLE, SUM(C.QUANTITY)" +
+                " FROM(CART C JOIN BOOKS B ON C.BOOKID = B.ID) JOIN ORDERS O ON C.ORDERID = O.ID" +
+                " WHERE MONTH(O.DATE) = MONTH(GETDATE()) AND YEAR(DATE) = YEAR(GETDATE())" +
+                " GROUP BY BOOKID, BOOKTITLE ORDER BY SUM(C.QUANTITY) DESC";
+
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result == null)
+                return "no book";
+            else
+                return result.ToString();
+        }
+
     }
 }

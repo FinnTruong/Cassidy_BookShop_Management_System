@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,7 +42,6 @@
             this.btnUsers = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnExpenses = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnStorage = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDetails = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSell = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHome = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
@@ -107,7 +106,6 @@
             this.panelLeft.Controls.Add(this.btnUsers);
             this.panelLeft.Controls.Add(this.btnExpenses);
             this.panelLeft.Controls.Add(this.btnStorage);
-            this.panelLeft.Controls.Add(this.btnDetails);
             this.panelLeft.Controls.Add(this.btnSell);
             this.panelLeft.Controls.Add(this.btnHome);
             this.panelAnimator.SetDecoration(this.panelLeft, BunifuAnimatorNS.DecorationType.None);
@@ -121,6 +119,9 @@
             this.panelLeft.Quality = 10;
             this.panelLeft.Size = new System.Drawing.Size(181, 720);
             this.panelLeft.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.panelLeft, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panelLeft, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panelLeft, "");
             // 
             // btnOrderInfo
             // 
@@ -145,7 +146,7 @@
             this.btnOrderInfo.IconVisible = true;
             this.btnOrderInfo.IconZoom = 60D;
             this.btnOrderInfo.IsTab = true;
-            this.btnOrderInfo.Location = new System.Drawing.Point(0, 262);
+            this.btnOrderInfo.Location = new System.Drawing.Point(0, 299);
             this.btnOrderInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrderInfo.Name = "btnOrderInfo";
             this.btnOrderInfo.Normalcolor = System.Drawing.Color.Transparent;
@@ -158,6 +159,9 @@
             this.btnOrderInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrderInfo.Textcolor = System.Drawing.Color.White;
             this.btnOrderInfo.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnOrderInfo, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnOrderInfo, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnOrderInfo, "");
             this.btnOrderInfo.Click += new System.EventHandler(this.btnOrderInfo_Click);
             // 
             // btnSlideMenu
@@ -196,6 +200,9 @@
             this.btnSlideMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSlideMenu.Textcolor = System.Drawing.Color.White;
             this.btnSlideMenu.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnSlideMenu, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSlideMenu, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSlideMenu, "");
             this.btnSlideMenu.Click += new System.EventHandler(this.BtnSlideMenu_Click);
             // 
             // btnLogout
@@ -221,7 +228,7 @@
             this.btnLogout.IconVisible = true;
             this.btnLogout.IconZoom = 60D;
             this.btnLogout.IsTab = true;
-            this.btnLogout.Location = new System.Drawing.Point(0, 612);
+            this.btnLogout.Location = new System.Drawing.Point(0, 583);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.Transparent;
@@ -234,6 +241,9 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Textcolor = System.Drawing.Color.White;
             this.btnLogout.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnLogout, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnLogout, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnLogout, "");
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // btnUsers
@@ -259,7 +269,7 @@
             this.btnUsers.IconVisible = true;
             this.btnUsers.IconZoom = 60D;
             this.btnUsers.IsTab = true;
-            this.btnUsers.Location = new System.Drawing.Point(0, 542);
+            this.btnUsers.Location = new System.Drawing.Point(1, 512);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Normalcolor = System.Drawing.Color.Transparent;
@@ -272,6 +282,9 @@
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Textcolor = System.Drawing.Color.White;
             this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnUsers, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnUsers, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnUsers, "");
             this.btnUsers.Click += new System.EventHandler(this.BtnUsers_Click);
             // 
             // btnExpenses
@@ -297,7 +310,7 @@
             this.btnExpenses.IconVisible = true;
             this.btnExpenses.IconZoom = 60D;
             this.btnExpenses.IsTab = true;
-            this.btnExpenses.Location = new System.Drawing.Point(0, 472);
+            this.btnExpenses.Location = new System.Drawing.Point(0, 441);
             this.btnExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpenses.Name = "btnExpenses";
             this.btnExpenses.Normalcolor = System.Drawing.Color.Transparent;
@@ -310,6 +323,9 @@
             this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExpenses.Textcolor = System.Drawing.Color.White;
             this.btnExpenses.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnExpenses, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnExpenses, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnExpenses, "");
             this.btnExpenses.Click += new System.EventHandler(this.btnExpenses_Click);
             // 
             // btnStorage
@@ -335,7 +351,7 @@
             this.btnStorage.IconVisible = true;
             this.btnStorage.IconZoom = 60D;
             this.btnStorage.IsTab = true;
-            this.btnStorage.Location = new System.Drawing.Point(0, 402);
+            this.btnStorage.Location = new System.Drawing.Point(0, 370);
             this.btnStorage.Margin = new System.Windows.Forms.Padding(4);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.Normalcolor = System.Drawing.Color.Transparent;
@@ -348,45 +364,10 @@
             this.btnStorage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStorage.Textcolor = System.Drawing.Color.White;
             this.btnStorage.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnStorage, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnStorage, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnStorage, "");
             this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
-            // 
-            // btnDetails
-            // 
-            this.btnDetails.Active = false;
-            this.btnDetails.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
-            this.btnDetails.BackColor = System.Drawing.Color.Transparent;
-            this.btnDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDetails.BorderRadius = 0;
-            this.btnDetails.ButtonText = "    Details";
-            this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAnimator.SetDecoration(this.btnDetails, BunifuAnimatorNS.DecorationType.None);
-            this.btnDetails.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDetails.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDetails.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDetails.Iconimage")));
-            this.btnDetails.Iconimage_right = null;
-            this.btnDetails.Iconimage_right_Selected = null;
-            this.btnDetails.Iconimage_Selected = null;
-            this.btnDetails.IconMarginLeft = 0;
-            this.btnDetails.IconMarginRight = 0;
-            this.btnDetails.IconRightVisible = true;
-            this.btnDetails.IconRightZoom = 0D;
-            this.btnDetails.IconVisible = true;
-            this.btnDetails.IconZoom = 60D;
-            this.btnDetails.IsTab = true;
-            this.btnDetails.Location = new System.Drawing.Point(0, 332);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
-            this.btnDetails.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDetails.selected = false;
-            this.btnDetails.Size = new System.Drawing.Size(181, 70);
-            this.btnDetails.TabIndex = 2;
-            this.btnDetails.Text = "    Details";
-            this.btnDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetails.Textcolor = System.Drawing.Color.White;
-            this.btnDetails.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetails.Click += new System.EventHandler(this.BtnDetails_Click);
             // 
             // btnSell
             // 
@@ -411,7 +392,7 @@
             this.btnSell.IconVisible = true;
             this.btnSell.IconZoom = 60D;
             this.btnSell.IsTab = true;
-            this.btnSell.Location = new System.Drawing.Point(0, 192);
+            this.btnSell.Location = new System.Drawing.Point(0, 228);
             this.btnSell.Margin = new System.Windows.Forms.Padding(4);
             this.btnSell.Name = "btnSell";
             this.btnSell.Normalcolor = System.Drawing.Color.Transparent;
@@ -424,6 +405,9 @@
             this.btnSell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSell.Textcolor = System.Drawing.Color.White;
             this.btnSell.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnSell, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnSell, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnSell, "");
             this.btnSell.Click += new System.EventHandler(this.BtnSell_Click);
             // 
             // btnHome
@@ -449,7 +433,7 @@
             this.btnHome.IconVisible = true;
             this.btnHome.IconZoom = 60D;
             this.btnHome.IsTab = true;
-            this.btnHome.Location = new System.Drawing.Point(0, 122);
+            this.btnHome.Location = new System.Drawing.Point(1, 157);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Normalcolor = System.Drawing.Color.Transparent;
@@ -462,6 +446,9 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Textcolor = System.Drawing.Color.White;
             this.btnHome.TextFont = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.btnHome, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnHome, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnHome, "");
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
             // panelAnimator
@@ -493,6 +480,9 @@
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(1019, 675);
             this.panelControls.TabIndex = 6;
+            this.bunifuToolTip1.SetToolTip(this.panelControls, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panelControls, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panelControls, "");
             // 
             // bunifuToolTip1
             // 
@@ -559,7 +549,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnUsers;
         private Bunifu.Framework.UI.BunifuFlatButton btnExpenses;
         private Bunifu.Framework.UI.BunifuFlatButton btnStorage;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDetails;
         private Bunifu.Framework.UI.BunifuFlatButton btnSell;
         private Bunifu.Framework.UI.BunifuFlatButton btnHome;
         private BunifuAnimatorNS.BunifuTransition panelAnimator;

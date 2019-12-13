@@ -24,7 +24,7 @@ namespace CassidyBookStore.UserControls
 
         void PopulateDataGrid()
         {
-            dtgvExpense.DataSource = SearchExpenseByName(txtSearchBox.Text);
+            dtgvExpense.DataSource = DataProvider.Instance.ExecuteQuery("SELECT * FROM EXPENSES");
             dtgvExpense.ClearSelection();
         }
 

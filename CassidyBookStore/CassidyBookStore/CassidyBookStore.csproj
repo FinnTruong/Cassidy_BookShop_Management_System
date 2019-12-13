@@ -345,11 +345,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Image\icons8_filled_circle_filled_25px.png" />
-    <EmbeddedResource Include="Image\icons8_filled_circle_filled_25px_1.png" />
-    <EmbeddedResource Include="Image\icons8_filled_circle_filled_25px_2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_filled_circle_filled_25px.png" />
   </ItemGroup>
   <ItemGroup>

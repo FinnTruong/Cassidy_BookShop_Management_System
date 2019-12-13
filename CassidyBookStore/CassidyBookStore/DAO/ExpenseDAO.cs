@@ -48,7 +48,7 @@ namespace CassidyBookStore.DAO
         {
             List<Expense> list = new List<Expense>();
 
-            string query = string.Format("SELECT * FROM EXPENSES WHERE TITLE LIKE '%{0}%'", name);
+            string query = string.Format("SELECT ID,TITLE,AMOUNT, DATE, DESCRIPTION FROM EXPENSES WHERE TITLE LIKE '%{0}%'", name);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -66,6 +66,27 @@ namespace CassidyBookStore.DAO
             object result = DataProvider.Instance.ExecuteScalar(query);
             return float.Parse(result.ToString());
         }
+
+        public float GetThisMonthExpenses(string month)
+        {
+            float num = 0;
+            string query = string.Format("SELECT SUM(AMOUNT) FROM EXPENSES WHERE MONTH(DATE) = {0} AND YEAR(DATE) = YEAR(GETDATE())", month);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result != null && float.TryParse(result.ToString(), out num))
+                return num;
+            return 0;                
+        }
+
+        public float GetYearExpenses(string year)
+        {
+            float num = 0;
+            string query = "SELECT SUM(AMOUNT) FROM EXPENSES WHERE YEAR(DATE) = " + year;
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result != null && float.TryParse(result.ToString(), out num))
+                return num;
+            return 0;
+        }
+
 
     }
 }

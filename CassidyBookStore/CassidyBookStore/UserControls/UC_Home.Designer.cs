@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
             this.card1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbAllConfirmedOrders = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,15 +53,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbTotalProfits = new System.Windows.Forms.Label();
+            this.lbTotalExpense = new System.Windows.Forms.Label();
+            this.lbTotalIncome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnReload = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lbP = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -72,18 +72,19 @@
             this.label17 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lbBestSeller = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbProfits = new System.Windows.Forms.Label();
+            this.lbTotalOrders = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.card1.SuspendLayout();
             this.card2.SuspendLayout();
             this.card4.SuspendLayout();
             this.card3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuCards2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -95,30 +96,36 @@
             this.card1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.card1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("card1.BackgroundImage")));
             this.card1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.card1.Controls.Add(this.label2);
+            this.card1.Controls.Add(this.lbAllConfirmedOrders);
             this.card1.Controls.Add(this.bunifuFlatButton1);
             this.card1.Controls.Add(this.label1);
             this.card1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(172)))), ((int)(((byte)(254)))));
             this.card1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
             this.card1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(172)))), ((int)(((byte)(254)))));
             this.card1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
-            this.card1.Location = new System.Drawing.Point(0, 747);
+            this.card1.Location = new System.Drawing.Point(-34, 747);
             this.card1.Name = "card1";
             this.card1.Quality = 10;
             this.card1.Size = new System.Drawing.Size(212, 113);
             this.card1.TabIndex = 4;
+            this.bunifuToolTip1.SetToolTip(this.card1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.card1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.card1, "");
             // 
-            // label2
+            // lbAllConfirmedOrders
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 45);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "3000";
+            this.lbAllConfirmedOrders.AutoSize = true;
+            this.lbAllConfirmedOrders.BackColor = System.Drawing.Color.Transparent;
+            this.lbAllConfirmedOrders.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllConfirmedOrders.ForeColor = System.Drawing.Color.White;
+            this.lbAllConfirmedOrders.Location = new System.Drawing.Point(18, 40);
+            this.lbAllConfirmedOrders.Name = "lbAllConfirmedOrders";
+            this.lbAllConfirmedOrders.Size = new System.Drawing.Size(92, 45);
+            this.lbAllConfirmedOrders.TabIndex = 7;
+            this.lbAllConfirmedOrders.Text = "3000";
+            this.bunifuToolTip1.SetToolTip(this.lbAllConfirmedOrders, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbAllConfirmedOrders, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbAllConfirmedOrders, "");
             // 
             // bunifuFlatButton1
             // 
@@ -154,6 +161,9 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.bunifuFlatButton1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuFlatButton1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuFlatButton1, "");
             // 
             // label1
             // 
@@ -166,6 +176,9 @@
             this.label1.Size = new System.Drawing.Size(114, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Orders";
+            this.bunifuToolTip1.SetToolTip(this.label1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
             // 
             // label3
             // 
@@ -173,11 +186,14 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 40);
+            this.label3.Location = new System.Drawing.Point(0, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 45);
             this.label3.TabIndex = 7;
             this.label3.Text = "2500$";
+            this.bunifuToolTip1.SetToolTip(this.label3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label3, "");
             // 
             // bunifuFlatButton2
             // 
@@ -213,6 +229,9 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.bunifuFlatButton2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuFlatButton2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuFlatButton2, "");
             // 
             // label4
             // 
@@ -225,6 +244,9 @@
             this.label4.Size = new System.Drawing.Size(134, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Expenses";
+            this.bunifuToolTip1.SetToolTip(this.label4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label4, "");
             // 
             // card2
             // 
@@ -238,11 +260,14 @@
             this.card2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
             this.card2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(113)))), ((int)(((byte)(245)))));
             this.card2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
-            this.card2.Location = new System.Drawing.Point(244, 747);
+            this.card2.Location = new System.Drawing.Point(210, 747);
             this.card2.Name = "card2";
             this.card2.Quality = 10;
             this.card2.Size = new System.Drawing.Size(212, 113);
             this.card2.TabIndex = 6;
+            this.bunifuToolTip1.SetToolTip(this.card2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.card2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.card2, "");
             // 
             // label5
             // 
@@ -255,6 +280,9 @@
             this.label5.Size = new System.Drawing.Size(74, 45);
             this.label5.TabIndex = 7;
             this.label5.Text = "516";
+            this.bunifuToolTip1.SetToolTip(this.label5, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label5, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label5, "");
             // 
             // label6
             // 
@@ -267,6 +295,9 @@
             this.label6.Size = new System.Drawing.Size(146, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Total Customers";
+            this.bunifuToolTip1.SetToolTip(this.label6, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label6, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label6, "");
             // 
             // card4
             // 
@@ -280,11 +311,14 @@
             this.card4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.card4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.card4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
-            this.card4.Location = new System.Drawing.Point(732, 747);
+            this.card4.Location = new System.Drawing.Point(698, 747);
             this.card4.Name = "card4";
             this.card4.Quality = 10;
             this.card4.Size = new System.Drawing.Size(219, 113);
             this.card4.TabIndex = 7;
+            this.bunifuToolTip1.SetToolTip(this.card4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.card4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.card4, "");
             // 
             // bunifuFlatButton3
             // 
@@ -320,6 +354,9 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.bunifuFlatButton3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuFlatButton3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuFlatButton3, "");
             // 
             // label7
             // 
@@ -332,6 +369,9 @@
             this.label7.Size = new System.Drawing.Size(92, 45);
             this.label7.TabIndex = 7;
             this.label7.Text = "1000";
+            this.bunifuToolTip1.SetToolTip(this.label7, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label7, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label7, "");
             // 
             // bunifuFlatButton4
             // 
@@ -367,6 +407,9 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuToolTip1.SetToolTip(this.bunifuFlatButton4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuFlatButton4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuFlatButton4, "");
             // 
             // label8
             // 
@@ -379,6 +422,9 @@
             this.label8.Size = new System.Drawing.Size(144, 25);
             this.label8.TabIndex = 0;
             this.label8.Text = "Books Available";
+            this.bunifuToolTip1.SetToolTip(this.label8, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label8, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label8, "");
             // 
             // card3
             // 
@@ -392,11 +438,14 @@
             this.card3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
             this.card3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(255)))), ((int)(((byte)(120)))));
             this.card3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
-            this.card3.Location = new System.Drawing.Point(488, 747);
+            this.card3.Location = new System.Drawing.Point(454, 747);
             this.card3.Name = "card3";
             this.card3.Quality = 10;
             this.card3.Size = new System.Drawing.Size(212, 113);
             this.card3.TabIndex = 8;
+            this.bunifuToolTip1.SetToolTip(this.card3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.card3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.card3, "");
             // 
             // loadData
             // 
@@ -414,39 +463,51 @@
             this.label23.Size = new System.Drawing.Size(226, 61);
             this.label23.TabIndex = 16;
             this.label23.Text = "Welcome";
+            this.bunifuToolTip1.SetToolTip(this.label23, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label23, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label23, "");
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Futura Bk BT", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.DimGray;
-            this.label24.Location = new System.Drawing.Point(46, 672);
+            this.label24.Location = new System.Drawing.Point(46, 678);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(79, 35);
+            this.label24.Size = new System.Drawing.Size(175, 35);
             this.label24.TabIndex = 17;
-            this.label24.Text = "Store";
+            this.label24.Text = "Store History";
+            this.bunifuToolTip1.SetToolTip(this.label24, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label24, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label24, "");
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(490, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(422, 113);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(421, 525);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox2, "");
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Futura Bk BT", 21.75F);
             this.label18.ForeColor = System.Drawing.Color.DimGray;
-            this.label18.Location = new System.Drawing.Point(45, 913);
+            this.label18.Location = new System.Drawing.Point(18, 12);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 35);
+            this.label18.Size = new System.Drawing.Size(184, 35);
             this.label18.TabIndex = 20;
-            this.label18.Text = "Statistics";
+            this.label18.Text = "Yearly Report";
+            this.bunifuToolTip1.SetToolTip(this.label18, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label18, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label18, "");
             // 
             // bunifuCards2
             // 
@@ -456,83 +517,102 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.White;
-            this.bunifuCards2.Controls.Add(this.label16);
-            this.bunifuCards2.Controls.Add(this.label15);
-            this.bunifuCards2.Controls.Add(this.label14);
+            this.bunifuCards2.Controls.Add(this.lbTotalProfits);
+            this.bunifuCards2.Controls.Add(this.lbTotalExpense);
+            this.bunifuCards2.Controls.Add(this.lbTotalIncome);
             this.bunifuCards2.Controls.Add(this.panel2);
             this.bunifuCards2.Controls.Add(this.panel1);
             this.bunifuCards2.Controls.Add(this.label13);
             this.bunifuCards2.Controls.Add(this.label12);
-            this.bunifuCards2.Controls.Add(this.bunifuImageButton2);
-            this.bunifuCards2.Controls.Add(this.label9);
+            this.bunifuCards2.Controls.Add(this.label18);
+            this.bunifuCards2.Controls.Add(this.btnReload);
+            this.bunifuCards2.Controls.Add(this.lbP);
             this.bunifuCards2.Controls.Add(this.label10);
             this.bunifuCards2.Controls.Add(this.label11);
             this.bunifuCards2.Controls.Add(this.bunifuSeparator1);
             this.bunifuCards2.Controls.Add(this.bunifuDataViz1);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(19, 980);
+            this.bunifuCards2.Location = new System.Drawing.Point(19, 909);
             this.bunifuCards2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 40;
-            this.bunifuCards2.Size = new System.Drawing.Size(911, 412);
+            this.bunifuCards2.Size = new System.Drawing.Size(843, 412);
             this.bunifuCards2.TabIndex = 21;
+            this.bunifuToolTip1.SetToolTip(this.bunifuCards2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuCards2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuCards2, "");
             // 
-            // label16
+            // lbTotalProfits
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label16.Location = new System.Drawing.Point(815, 286);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 21);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "1000";
+            this.lbTotalProfits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTotalProfits.AutoSize = true;
+            this.lbTotalProfits.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbTotalProfits.Location = new System.Drawing.Point(739, 286);
+            this.lbTotalProfits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTotalProfits.Name = "lbTotalProfits";
+            this.lbTotalProfits.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalProfits.TabIndex = 21;
+            this.lbTotalProfits.Text = "1000";
+            this.bunifuToolTip1.SetToolTip(this.lbTotalProfits, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbTotalProfits, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbTotalProfits, "");
             // 
-            // label15
+            // lbTotalExpense
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label15.Location = new System.Drawing.Point(815, 201);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 21);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "2000";
+            this.lbTotalExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTotalExpense.AutoSize = true;
+            this.lbTotalExpense.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbTotalExpense.Location = new System.Drawing.Point(739, 201);
+            this.lbTotalExpense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTotalExpense.Name = "lbTotalExpense";
+            this.lbTotalExpense.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalExpense.TabIndex = 20;
+            this.lbTotalExpense.Text = "2000";
+            this.bunifuToolTip1.SetToolTip(this.lbTotalExpense, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbTotalExpense, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbTotalExpense, "");
             // 
-            // label14
+            // lbTotalIncome
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label14.Location = new System.Drawing.Point(815, 121);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 21);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "1000";
+            this.lbTotalIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTotalIncome.AutoSize = true;
+            this.lbTotalIncome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbTotalIncome.Location = new System.Drawing.Point(739, 121);
+            this.lbTotalIncome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTotalIncome.Name = "lbTotalIncome";
+            this.lbTotalIncome.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalIncome.TabIndex = 19;
+            this.lbTotalIncome.Text = "1000";
+            this.bunifuToolTip1.SetToolTip(this.lbTotalIncome, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbTotalIncome, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbTotalIncome, "");
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(197)))), ((int)(((byte)(176)))));
-            this.panel2.Location = new System.Drawing.Point(547, 44);
+            this.panel2.Location = new System.Drawing.Point(479, 44);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(20, 16);
             this.panel2.TabIndex = 18;
+            this.bunifuToolTip1.SetToolTip(this.panel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel2, "");
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Location = new System.Drawing.Point(423, 42);
+            this.panel1.Location = new System.Drawing.Point(355, 42);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(20, 16);
             this.panel1.TabIndex = 17;
+            this.bunifuToolTip1.SetToolTip(this.panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
             // 
             // label13
             // 
@@ -540,11 +620,14 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(573, 42);
+            this.label13.Location = new System.Drawing.Point(505, 42);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 19);
             this.label13.TabIndex = 16;
             this.label13.Text = "Income";
+            this.bunifuToolTip1.SetToolTip(this.label13, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label13, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label13, "");
             // 
             // label12
             // 
@@ -552,38 +635,48 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(455, 41);
+            this.label12.Location = new System.Drawing.Point(387, 41);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(58, 19);
             this.label12.TabIndex = 15;
             this.label12.Text = "Expense";
+            this.bunifuToolTip1.SetToolTip(this.label12, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label12, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label12, "");
             // 
-            // bunifuImageButton2
+            // btnReload
             // 
-            this.bunifuImageButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(865, 4);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(43, 43);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 14;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 5;
+            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReload.BackColor = System.Drawing.Color.Transparent;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageActive = null;
+            this.btnReload.Location = new System.Drawing.Point(797, 4);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(43, 43);
+            this.btnReload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnReload.TabIndex = 14;
+            this.btnReload.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnReload, "Reload Chart");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnReload, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnReload, "");
+            this.btnReload.Zoom = 5;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
-            // label9
+            // lbP
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(700, 285);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 19);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Profits:";
+            this.lbP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbP.AutoSize = true;
+            this.lbP.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbP.ForeColor = System.Drawing.Color.Gray;
+            this.lbP.Location = new System.Drawing.Point(632, 285);
+            this.lbP.Name = "lbP";
+            this.lbP.Size = new System.Drawing.Size(51, 19);
+            this.lbP.TabIndex = 13;
+            this.lbP.Text = "Profits:";
+            this.bunifuToolTip1.SetToolTip(this.lbP, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbP, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbP, "");
             // 
             // label10
             // 
@@ -591,11 +684,14 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(700, 201);
+            this.label10.Location = new System.Drawing.Point(632, 201);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 19);
             this.label10.TabIndex = 12;
             this.label10.Text = "Total Expense:";
+            this.bunifuToolTip1.SetToolTip(this.label10, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label10, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label10, "");
             // 
             // label11
             // 
@@ -603,11 +699,14 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(700, 121);
+            this.label11.Location = new System.Drawing.Point(632, 121);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Total Income:";
+            this.bunifuToolTip1.SetToolTip(this.label11, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label11, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label11, "");
             // 
             // bunifuSeparator1
             // 
@@ -615,11 +714,14 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(680, 107);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(612, 107);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(13, 225);
             this.bunifuSeparator1.TabIndex = 10;
+            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator1, "");
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
             // 
@@ -647,10 +749,13 @@
             this.bunifuDataViz1.Location = new System.Drawing.Point(24, 67);
             this.bunifuDataViz1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(646, 323);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(578, 323);
             this.bunifuDataViz1.TabIndex = 1;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
+            this.bunifuToolTip1.SetToolTip(this.bunifuDataViz1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuDataViz1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuDataViz1, "");
             // 
             // bunifuElipse1
             // 
@@ -663,11 +768,14 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(175, 72);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(141, 72);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(622, 21);
             this.bunifuSeparator2.TabIndex = 26;
+            this.bunifuToolTip1.SetToolTip(this.bunifuSeparator2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuSeparator2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuSeparator2, "");
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
@@ -675,12 +783,15 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(269, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(235, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
             // 
             // label17
             // 
@@ -688,11 +799,14 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Marketing Script", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(330, 8);
+            this.label17.Location = new System.Drawing.Point(296, 8);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(352, 60);
             this.label17.TabIndex = 28;
             this.label17.Text = "Bookshop Cassidy";
+            this.bunifuToolTip1.SetToolTip(this.label17, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label17, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label17, "");
             // 
             // richTextBox1
             // 
@@ -706,6 +820,9 @@
             this.richTextBox1.Size = new System.Drawing.Size(417, 171);
             this.richTextBox1.TabIndex = 29;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.bunifuToolTip1.SetToolTip(this.richTextBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.richTextBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.richTextBox1, "");
             // 
             // pictureBox3
             // 
@@ -716,17 +833,23 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox3, "");
             // 
-            // label19
+            // lbBestSeller
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DimGray;
-            this.label19.Location = new System.Drawing.Point(82, 417);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(99, 19);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "Best Seller: ";
+            this.lbBestSeller.AutoSize = true;
+            this.lbBestSeller.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBestSeller.ForeColor = System.Drawing.Color.DimGray;
+            this.lbBestSeller.Location = new System.Drawing.Point(82, 417);
+            this.lbBestSeller.Name = "lbBestSeller";
+            this.lbBestSeller.Size = new System.Drawing.Size(178, 19);
+            this.lbBestSeller.TabIndex = 31;
+            this.lbBestSeller.Text = "This month best seller is";
+            this.bunifuToolTip1.SetToolTip(this.lbBestSeller, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbBestSeller, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbBestSeller, "");
             // 
             // pictureBox4
             // 
@@ -737,28 +860,37 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 32;
             this.pictureBox4.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox4, "");
             // 
-            // label20
+            // lbProfits
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DimGray;
-            this.label20.Location = new System.Drawing.Point(82, 482);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 19);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "Profits:";
+            this.lbProfits.AutoSize = true;
+            this.lbProfits.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProfits.ForeColor = System.Drawing.Color.DimGray;
+            this.lbProfits.Location = new System.Drawing.Point(82, 482);
+            this.lbProfits.Name = "lbProfits";
+            this.lbProfits.Size = new System.Drawing.Size(274, 19);
+            this.lbProfits.TabIndex = 34;
+            this.lbProfits.Text = "This month profits curently is S100.00";
+            this.bunifuToolTip1.SetToolTip(this.lbProfits, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbProfits, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbProfits, "");
             // 
-            // label21
+            // lbTotalOrders
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Futura Hv BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DimGray;
-            this.label21.Location = new System.Drawing.Point(82, 549);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 19);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "New Book:";
+            this.lbTotalOrders.AutoSize = true;
+            this.lbTotalOrders.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalOrders.ForeColor = System.Drawing.Color.DimGray;
+            this.lbTotalOrders.Location = new System.Drawing.Point(82, 549);
+            this.lbTotalOrders.Name = "lbTotalOrders";
+            this.lbTotalOrders.Size = new System.Drawing.Size(362, 19);
+            this.lbTotalOrders.TabIndex = 36;
+            this.lbTotalOrders.Text = "There have been 100 confirmed orders this month";
+            this.bunifuToolTip1.SetToolTip(this.lbTotalOrders, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbTotalOrders, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbTotalOrders, "");
             // 
             // pictureBox5
             // 
@@ -769,6 +901,44 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox5.TabIndex = 35;
             this.pictureBox5.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox5, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox5, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox5, "");
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
             // 
             // UC_Home
             // 
@@ -776,18 +946,17 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(15, 30);
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label21);
+            this.Controls.Add(this.lbTotalOrders);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.lbProfits);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.lbBestSeller);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.bunifuCards2);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -798,7 +967,10 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "UC_Home";
-            this.Size = new System.Drawing.Size(944, 675);
+            this.Size = new System.Drawing.Size(876, 675);
+            this.bunifuToolTip1.SetToolTip(this, "");
+            this.bunifuToolTip1.SetToolTipIcon(this, null);
+            this.bunifuToolTip1.SetToolTipTitle(this, "");
             this.card1.ResumeLayout(false);
             this.card1.PerformLayout();
             this.card2.ResumeLayout(false);
@@ -810,7 +982,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -823,7 +995,7 @@
         #endregion
         private Bunifu.Framework.UI.BunifuGradientPanel card1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbAllConfirmedOrders;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
@@ -844,15 +1016,15 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbTotalProfits;
+        private System.Windows.Forms.Label lbTotalExpense;
+        private System.Windows.Forms.Label lbTotalIncome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Label label9;
+        private Bunifu.Framework.UI.BunifuImageButton btnReload;
+        private System.Windows.Forms.Label lbP;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
@@ -862,11 +1034,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbBestSeller;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbTotalOrders;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbProfits;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
     }
 }

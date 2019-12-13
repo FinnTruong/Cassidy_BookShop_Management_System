@@ -9,7 +9,7 @@ namespace CassidyBookStore.DTO
 {
     public class Expense
     {
-        public Expense(int id, string title, float amount, string date, string description)
+        public Expense(int id, string title, float amount, DateTime date, string description)
         {
             this.Id = id;
             this.Title = title;
@@ -23,20 +23,20 @@ namespace CassidyBookStore.DTO
             this.Id = (int)row["id"];
             this.Title = row["title"].ToString();
             this.Amount = float.Parse(row["amount"].ToString());
-            this.Date = row["date"].ToString();
+            this.Date = (DateTime?)row["date"];
             this.Description = row["description"].ToString();
         }
 
         private int id;
         private string title;
         private float amount;
-        private string date;
+        private DateTime? date;
         private string description;
 
         public int Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
         public float Amount { get => amount; set => amount = value; }
-        public string Date { get => date; set => date = value; }
+        public DateTime? Date { get => date; set => date = value; }
         public string Description { get => description; set => description = value; }
     }
 }

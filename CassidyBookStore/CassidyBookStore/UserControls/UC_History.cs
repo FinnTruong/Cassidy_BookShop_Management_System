@@ -17,19 +17,22 @@ namespace CassidyBookStore.UserControls
     public partial class UC_History : UserControl
     {
         int curRowIndex = -1;
+        bool isCollapsed = true;
         
         public UC_History()
         {
             InitializeComponent();
             LoadOrder();
-            
+            curRowIndex = 0;
+            lbTotal.Text = OrderDAO.Instance.GetTotalOrder().ToString();            
         }
 
         void LoadOrder()
         {
-            string query = "SELECT ORDERS.ID, FULLNAME, CONVERT(DATE,GETDATE()) AS DATE, TOTAL, STATUS FROM ORDERS JOIN CUSTOMERS ON CUSTOMERSID = CUSTOMERS.ID";
+            string query = "SELECT ORDERS.ID, FULLNAME, DATE, TOTAL, STATUS FROM ORDERS JOIN CUSTOMERS ON CUSTOMERSID = CUSTOMERS.ID";
             dtgvOrder.DataSource = DataProvider.Instance.ExecuteQuery(query);
             dtgvOrder.ClearSelection();
+            curRowIndex = -1;
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)
@@ -76,6 +79,17 @@ namespace CassidyBookStore.UserControls
             if (curRowIndex >= 0)
             {
                 int orderID = (int)dtgvOrder.Rows[curRowIndex].Cells["ID"].Value;
+                int status = (int)dtgvOrder.Rows[curRowIndex].Cells["Status"].Value;
+                if(status == 2)
+                {
+                    MessageBox.Show("Can't finalized aborted order");
+                    return;
+                }
+                if(status == 1)
+                {
+                    MessageBox.Show("This order has already been finalized");
+                    return;
+                }
                 try
                 {
                     OrderDAO.Instance.FinalizedOrder(orderID);
@@ -98,6 +112,17 @@ namespace CassidyBookStore.UserControls
             if (curRowIndex >= 0)
             {
                 int orderID = (int)dtgvOrder.Rows[curRowIndex].Cells["ID"].Value;
+                int status = (int)dtgvOrder.Rows[curRowIndex].Cells["Status"].Value;
+                if(status == 1)
+                {
+                    MessageBox.Show("Can't abort finalized order");
+                    return;
+                }
+                if (status == 2)
+                {
+                    MessageBox.Show("This order has already been aborted");
+                    return;
+                }
                 try
                 {
                     OrderDAO.Instance.AbortedOrder(orderID);
@@ -114,5 +139,96 @@ namespace CassidyBookStore.UserControls
                 MessageBox.Show("Please choose an order to abort");
             }
         }
+
+        #region Filter
+
+        private void Filter(DateTime From, DateTime To)
+        {
+            if(chkbAllTime.Checked == true)
+            {
+                string query = "SELECT ORDERS.ID, FULLNAME, DATE, TOTAL, STATUS FROM ORDERS JOIN CUSTOMERS ON CUSTOMERSID = CUSTOMERS.ID";
+                dtgvOrder.DataSource = DataProvider.Instance.ExecuteQuery(query);
+                lbPeriod.Visible = false;
+                lbTotal.Text = OrderDAO.Instance.GetTotalOrder().ToString();
+            }
+            else if(chkbSpecific.Checked == true)
+            {
+                if(From.Date > To.Date)
+                {                    
+                    return;
+                }
+                else
+                {
+                    dtgvOrder.DataSource = OrderDAO.Instance.FilterByDate(From, To);
+                    lbPeriod.Visible = true;
+                    lbPeriod.Text = string.Format("FROM {0}/{1} TO {2}/{3}", From.Day.ToString(), From.Month.ToString(), To.Day.ToString(), To.Day.ToString());
+                    lbTotal.Text = OrderDAO.Instance.GetTotalOrderInPeriod(From, To).ToString();
+                }
+            }
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                panelFilter.Visible = false;
+                panelFilter.Height = 138;
+                FilterAnimator.ShowSync(panelFilter);
+                isCollapsed = false;
+            }
+            else
+            {
+                if(FromDate.Value > ToDate.Value && chkbAllTime.Checked == false)
+                {
+                    MessageBox.Show("Invalid Date");
+                    return;
+                }
+                Filter(FromDate.Value, ToDate.Value);
+                panelFilter.Visible = false;
+                panelFilter.Height = 1;
+                FilterAnimator.ShowSync(panelFilter);
+                isCollapsed = true;
+            }
+        }
+
+
+        private void chkbAllTime_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if(chkbAllTime.Checked == true)
+            {
+                chkbSpecific.Checked = false;
+                FromDate.Visible = false;
+                ToDate.Visible = false;
+            }
+            else if(chkbAllTime.Checked == false && chkbSpecific.Checked == false)
+            {
+                chkbSpecific.Checked = true;
+                
+            }
+
+        }
+
+        private void chkbSpecific_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            if (chkbSpecific.Checked == true)
+            {
+                chkbAllTime.Checked = false;
+                FilterAnimator.ShowSync(FromDate);
+                FilterAnimator.ShowSync(ToDate);
+            }
+            else if(chkbAllTime.Checked == false && chkbSpecific.Checked == false)
+            {
+                chkbAllTime.Checked = true;
+                FromDate.Visible = false;
+                ToDate.Visible = false;
+            }
+        }
+
+
+
+
+
+        #endregion
+
     }
 }

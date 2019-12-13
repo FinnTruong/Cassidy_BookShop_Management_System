@@ -71,18 +71,12 @@ namespace CassidyBookStore.DAO
             }
         }
 
-        public int GetOrderCount()
-        {
-            string query = "SELECT COUNT(*) FROM ORDERS";
-            object result = DataProvider.Instance.ExecuteScalar(query);
-            return (int)result;
-        }
 
         public List<Order> SearchOrder(string searchString)
         {
             List<Order> listOrder = new List<Order>();
 
-            string query = string.Format("SELECT O.ID,FULLNAME,CONVERT(DATE,GETDATE()) AS DATE,TOTAL, O.STATUS FROM ORDERS O JOIN CUSTOMERS C ON O.CUSTOMERSID = C.ID WHERE FULLNAME LIKE '%{0}%'", searchString);
+            string query = string.Format("SELECT O.ID,FULLNAME,DATE,TOTAL, O.STATUS FROM ORDERS O JOIN CUSTOMERS C ON O.CUSTOMERSID = C.ID WHERE FULLNAME LIKE '%{0}%'", searchString);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -96,14 +90,74 @@ namespace CassidyBookStore.DAO
 
         public void FinalizedOrder(int orderID)
         {
-            string query = "UPDATE ORDERS SET STATUS = 1 WHERE ID = " + orderID;
+            string query = "UPDATE ORDERS SET STATUS = 1 WHERE STATUS = 0 AND ID = " + orderID;
             DataProvider.Instance.ExecuteQuery(query);
         }
 
         public void AbortedOrder(int orderID)
         {
-            string query = "UPDATE ORDERS SET STATUS = 2 WHERE ID = " + orderID;
+            string query = "UPDATE ORDERS SET STATUS = 2 WHERE STATUS = 0 AND ID = " + orderID;
             DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public float GetThisMonthIncome(string month)
+        {
+            float temp = 0;
+            string query = string.Format("SELECT SUM(TOTAL) FROM ORDERS WHERE MONTH(DATE) = {0} AND YEAR(DATE) = YEAR(GETDATE()) AND STATUS <> 2",month);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result != null && float.TryParse(result.ToString(), out temp))
+                return temp;
+            return 0;                
+        }
+
+        public float GetYearIncome(string year)
+        {
+            float temp = 0;
+            string query = string.Format("SELECT SUM(TOTAL) FROM ORDERS WHERE YEAR(DATE) = {0} AND STATUS <>2 ", year);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result != null && float.TryParse(result.ToString(), out temp))
+                return temp;
+            return 0;
+        }
+
+        public int GetThisMonthTotalOrders(string month)
+        {
+            string query = string.Format("SELECT COUNT(*) FROM ORDERS WHERE MONTH(DATE) = {0} AND YEAR(DATE) = YEAR(GETDATE()) AND STATUS = 1", month);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result == null)
+                return 0;
+            else
+                return int.Parse(result.ToString());            
+        }
+
+        public DataTable FilterByDate(DateTime from, DateTime to)
+        {
+            string fromDate = from.ToString("MM/dd/yyyy");
+            string toDate = to.ToString("MM/dd/yyyy");
+            string query = string.Format("SELECT ORDERS.ID, FULLNAME, DATE, TOTAL, STATUS FROM ORDERS JOIN CUSTOMERS ON CUSTOMERSID = CUSTOMERS.ID" +
+                " WHERE DATE BETWEEN '{0}' AND '{1}'", fromDate, toDate);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public int GetTotalOrder()
+        {
+            string query = "SELECT COUNT(*) FROM ORDERS";
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result == null)
+                return 0;
+            else
+                return int.Parse(result.ToString())-1;
+        }
+
+        public int GetTotalOrderInPeriod(DateTime from, DateTime to)
+        {
+            string fromDate = from.ToString("MM/dd/yyyy");
+            string toDate = to.ToString("MM/dd/yyyy");
+            string query = string.Format("SELECT COUNT(*) FROM ORDERS WHERE DATE BETWEEN '{0}' AND '{1}'", fromDate, toDate);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            if (result == null)
+                return 0;
+            return int.Parse(result.ToString());
         }
     }
 }
