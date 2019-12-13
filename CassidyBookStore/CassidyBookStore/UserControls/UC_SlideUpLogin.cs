@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CassidyBookStore.Forms;
+using CassidyBookStore.DAO;
 
 namespace CassidyBookStore
 {
@@ -29,21 +30,31 @@ namespace CassidyBookStore
         //LOG IN
         private void Login()
         {
-            if(textBox1.Text == "Finn" && textBox2.Text =="pass123")
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+            try
             {
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                timer2.Enabled = true;
-                label4.Text = "Welcome back " + textBox1.Text;
-                label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
-            }  
-            else
+                if (AccountDAO.Instance.Login(username, password))
+                {
+                    textBox1.Enabled = false;
+                    textBox2.Enabled = false;
+                    timer2.Enabled = true;
+                    label4.Text = "Welcome back " + AccountDAO.Instance.ReturnUsersFirstName(username, password);
+                    label4.Location = new Point((panel3.Size.Width / 2 - (label4.Size.Width / 2)), (panel3.Size.Height / 2 - (label4.Size.Height / 2)));
+                }
+                else
+                {
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    MessageBox.Show("Your username or password is incorrect");
+                }
+            }
+            catch
             {
-                textBox1.Text = "";
-                textBox2.Text = "";
-                MessageBox.Show("Your username or password is incorrect");
+                MessageBox.Show("Login Failed");
             }
         }
+
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
@@ -68,11 +79,12 @@ namespace CassidyBookStore
         }
 
 
+
         //Panel 1 Slide Up Timer
         private void Timer1_Tick(object sender, EventArgs e)
         {
             waiter++;
-            if (waiter > 150)
+            if (waiter > 50)
             {
                 panel1_y -= 6;
                 panel1.Size = new Size(panel1.Size.Width, panel1_y);

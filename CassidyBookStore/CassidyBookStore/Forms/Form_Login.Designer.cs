@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.uC_SlideUpLogin2 = new CassidyBookStore.UC_SlideUpLogin();
             this.SuspendLayout();
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // uC_SlideUpLogin2
             // 
@@ -43,6 +50,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 300);
             this.Controls.Add(this.uC_SlideUpLogin2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -56,6 +64,7 @@
         #endregion
 
         private UC_SlideUpLogin uC_SlideUpLogin2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 
