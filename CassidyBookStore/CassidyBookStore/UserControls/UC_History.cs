@@ -123,8 +123,19 @@ namespace CassidyBookStore.UserControls
                     MessageBox.Show("This order has already been aborted");
                     return;
                 }
-                try
-                {
+                try                {
+
+                    //Update the storage since the order was cancel
+                    List<int> listBookID = CartItemDAO.Instance.GetAllBookIDFromCart(orderID); //get all the book from  order
+                    foreach (int item in listBookID) //loop through every book
+                    {
+                        int quantity = CartItemDAO.Instance.GetBookQuantity(item, orderID); //get the book quantity in the cart
+                        int stock = int.Parse(BookDAO.Instance.GetStock(item)); //get current stock of book from storage
+                        int remain = stock + quantity; //calculate the book stock after clear the cart
+                        BookDAO.Instance.UpdateStorage(item, remain); //Update the storage
+                    }
+
+                    //Abort the order
                     OrderDAO.Instance.AbortedOrder(orderID);
                     MessageBox.Show("Order Aborted");
                     LoadOrder();
@@ -161,7 +172,7 @@ namespace CassidyBookStore.UserControls
                 {
                     dtgvOrder.DataSource = OrderDAO.Instance.FilterByDate(From, To);
                     lbPeriod.Visible = true;
-                    lbPeriod.Text = string.Format("FROM {0}/{1} TO {2}/{3}", From.Day.ToString(), From.Month.ToString(), To.Day.ToString(), To.Day.ToString());
+                    lbPeriod.Text = string.Format("FROM {0}/{1} TO {2}/{3}", From.Day.ToString(), From.Month.ToString(), To.Day.ToString(), To.Month.ToString());
                     lbTotal.Text = OrderDAO.Instance.GetTotalOrderInPeriod(From, To).ToString();
                 }
             }

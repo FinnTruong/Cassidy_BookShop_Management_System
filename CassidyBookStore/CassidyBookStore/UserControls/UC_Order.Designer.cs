@@ -143,6 +143,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Amount = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.cbID = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -213,6 +214,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.InfoProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuPages1.SuspendLayout();
             this.Order.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
@@ -227,6 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPages1
@@ -241,10 +244,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage3;
-            this.bunifuPages1.PageIndex = 2;
-            this.bunifuPages1.PageName = "tabPage3";
-            this.bunifuPages1.PageTitle = "Confirm";
+            this.bunifuPages1.Page = this.Order;
+            this.bunifuPages1.PageIndex = 0;
+            this.bunifuPages1.PageName = "Order";
+            this.bunifuPages1.PageTitle = "532, 35";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1019, 675);
             this.bunifuPages1.TabIndex = 0;
@@ -280,10 +283,10 @@
             this.Order.Controls.Add(this.bunifuCards1);
             this.Order.Location = new System.Drawing.Point(4, 4);
             this.Order.Name = "Order";
-            this.Order.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Order.Padding = new System.Windows.Forms.Padding(3);
             this.Order.Size = new System.Drawing.Size(1011, 649);
             this.Order.TabIndex = 0;
-            this.Order.Text = "Order";
+            this.Order.Text = "532, 35";
             this.bunifuToolTip1.SetToolTip(this.Order, "");
             this.bunifuToolTip1.SetToolTipIcon(this.Order, null);
             this.bunifuToolTip1.SetToolTipTitle(this.Order, "");
@@ -294,8 +297,8 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(71, 635);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(55, 635);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(806, 23);
             this.bunifuSeparator2.TabIndex = 20;
@@ -337,7 +340,7 @@
             this.bunifuCards2.Controls.Add(this.label1);
             this.bunifuCards2.Controls.Add(this.txt_Amount);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(88, 690);
+            this.bunifuCards2.Location = new System.Drawing.Point(72, 690);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = false;
             this.bunifuCards2.ShadowDepth = 60;
@@ -533,7 +536,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(518, 208);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(197, 23);
             this.bunifuSeparator1.TabIndex = 8;
@@ -768,6 +771,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = false;
             this.bunifuCards1.color = System.Drawing.Color.White;
+            this.bunifuCards1.Controls.Add(this.cbID);
             this.bunifuCards1.Controls.Add(this.label9);
             this.bunifuCards1.Controls.Add(this.label8);
             this.bunifuCards1.Controls.Add(this.label4);
@@ -784,7 +788,7 @@
             this.bunifuCards1.Controls.Add(this.label7);
             this.bunifuCards1.Controls.Add(this.label6);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(88, 94);
+            this.bunifuCards1.Location = new System.Drawing.Point(72, 94);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = false;
             this.bunifuCards1.ShadowDepth = 50;
@@ -793,6 +797,44 @@
             this.bunifuToolTip1.SetToolTip(this.bunifuCards1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuCards1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuCards1, "");
+            // 
+            // cbID
+            // 
+            this.cbID.BackColor = System.Drawing.Color.White;
+            this.cbID.BorderRadius = 1;
+            this.cbID.Color = System.Drawing.Color.Silver;
+            this.cbID.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cbID.DisabledColor = System.Drawing.Color.Gray;
+            this.cbID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbID.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cbID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbID.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cbID.FillDropDown = false;
+            this.cbID.FillIndicator = false;
+            this.cbID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbID.ForeColor = System.Drawing.Color.Gray;
+            this.cbID.FormattingEnabled = true;
+            this.cbID.Icon = null;
+            this.InfoProvider.SetIconPadding(this.cbID, 5);
+            this.cbID.IndicatorColor = System.Drawing.Color.Gray;
+            this.cbID.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cbID.ItemBackColor = System.Drawing.Color.White;
+            this.cbID.ItemBorderColor = System.Drawing.Color.Silver;
+            this.cbID.ItemForeColor = System.Drawing.Color.Gray;
+            this.cbID.ItemHeight = 28;
+            this.cbID.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.cbID.Location = new System.Drawing.Point(183, 120);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(532, 34);
+            this.cbID.TabIndex = 31;
+            this.cbID.Text = null;
+            this.bunifuToolTip1.SetToolTip(this.cbID, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.cbID, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.cbID, "");
+            this.cbID.Visible = false;
+            this.cbID.SelectionChangeCommitted += new System.EventHandler(this.cbID_SelectionChangeCommitted);
+            this.cbID.TextChanged += new System.EventHandler(this.cbID_TextChanged);
             // 
             // label9
             // 
@@ -944,6 +986,7 @@
             this.txtBookTitle.IconLeft = null;
             this.txtBookTitle.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBookTitle.IconPadding = 10;
+            this.InfoProvider.SetIconPadding(this.txtBookTitle, 5);
             this.txtBookTitle.IconRight = null;
             this.txtBookTitle.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBookTitle.Lines = new string[0];
@@ -1527,7 +1570,7 @@
             this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1011, 649);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Customer";
@@ -1563,7 +1606,7 @@
             this.Card.Name = "Card";
             this.Card.RightSahddow = false;
             this.Card.ShadowDepth = 50;
-            this.Card.Size = new System.Drawing.Size(665, 595);
+            this.Card.Size = new System.Drawing.Size(631, 595);
             this.Card.TabIndex = 21;
             this.bunifuToolTip1.SetToolTip(this.Card, "");
             this.bunifuToolTip1.SetToolTipIcon(this.Card, null);
@@ -1608,7 +1651,7 @@
             this.btn_NewCustomer.IdleIconLeftImage = null;
             this.btn_NewCustomer.IdleIconRightImage = null;
             this.btn_NewCustomer.IndicateFocus = false;
-            this.btn_NewCustomer.Location = new System.Drawing.Point(52, 451);
+            this.btn_NewCustomer.Location = new System.Drawing.Point(35, 451);
             this.btn_NewCustomer.Name = "btn_NewCustomer";
             stateProperties43.BorderColor = System.Drawing.Color.Transparent;
             stateProperties43.BorderRadius = 3;
@@ -1677,7 +1720,7 @@
             this.btn_BackDetails.IdleIconLeftImage = null;
             this.btn_BackDetails.IdleIconRightImage = null;
             this.btn_BackDetails.IndicateFocus = false;
-            this.btn_BackDetails.Location = new System.Drawing.Point(200, 496);
+            this.btn_BackDetails.Location = new System.Drawing.Point(183, 496);
             this.btn_BackDetails.Name = "btn_BackDetails";
             stateProperties45.BorderColor = System.Drawing.Color.DarkViolet;
             stateProperties45.BorderRadius = 30;
@@ -1745,7 +1788,7 @@
             this.btn_NextConfirm.IdleIconLeftImage = null;
             this.btn_NextConfirm.IdleIconRightImage = null;
             this.btn_NextConfirm.IndicateFocus = false;
-            this.btn_NextConfirm.Location = new System.Drawing.Point(356, 496);
+            this.btn_NextConfirm.Location = new System.Drawing.Point(339, 496);
             this.btn_NextConfirm.Name = "btn_NextConfirm";
             stateProperties47.BorderColor = System.Drawing.Color.DarkViolet;
             stateProperties47.BorderRadius = 30;
@@ -1814,7 +1857,7 @@
             this.btn_ExistingCustomer.IdleIconLeftImage = null;
             this.btn_ExistingCustomer.IdleIconRightImage = null;
             this.btn_ExistingCustomer.IndicateFocus = false;
-            this.btn_ExistingCustomer.Location = new System.Drawing.Point(51, 451);
+            this.btn_ExistingCustomer.Location = new System.Drawing.Point(34, 451);
             this.btn_ExistingCustomer.Name = "btn_ExistingCustomer";
             stateProperties49.BorderColor = System.Drawing.Color.Transparent;
             stateProperties49.BorderRadius = 3;
@@ -1872,7 +1915,7 @@
             this.txt_City.IconRight = null;
             this.txt_City.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_City.Lines = new string[0];
-            this.txt_City.Location = new System.Drawing.Point(51, 391);
+            this.txt_City.Location = new System.Drawing.Point(34, 391);
             this.txt_City.MaxLength = 32767;
             this.txt_City.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_City.Modified = false;
@@ -1927,7 +1970,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(47, 358);
+            this.label18.Location = new System.Drawing.Point(30, 358);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(41, 21);
             this.label18.TabIndex = 25;
@@ -1942,7 +1985,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(48, 267);
+            this.label17.Location = new System.Drawing.Point(31, 267);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(72, 21);
             this.label17.TabIndex = 23;
@@ -1979,7 +2022,7 @@
             this.txt_Address.IconRight = null;
             this.txt_Address.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Address.Lines = new string[0];
-            this.txt_Address.Location = new System.Drawing.Point(52, 300);
+            this.txt_Address.Location = new System.Drawing.Point(35, 300);
             this.txt_Address.MaxLength = 32767;
             this.txt_Address.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Address.Modified = false;
@@ -2034,7 +2077,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(352, 129);
+            this.label16.Location = new System.Drawing.Point(335, 129);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 21);
             this.label16.TabIndex = 21;
@@ -2071,7 +2114,7 @@
             this.txt_Email.IconRight = null;
             this.txt_Email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Email.Lines = new string[0];
-            this.txt_Email.Location = new System.Drawing.Point(356, 162);
+            this.txt_Email.Location = new System.Drawing.Point(339, 162);
             this.txt_Email.MaxLength = 32767;
             this.txt_Email.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Email.Modified = false;
@@ -2127,7 +2170,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(48, 129);
+            this.label15.Location = new System.Drawing.Point(31, 129);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 21);
             this.label15.TabIndex = 19;
@@ -2164,7 +2207,7 @@
             this.txt_Phone.IconRight = null;
             this.txt_Phone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Phone.Lines = new string[0];
-            this.txt_Phone.Location = new System.Drawing.Point(52, 162);
+            this.txt_Phone.Location = new System.Drawing.Point(35, 162);
             this.txt_Phone.MaxLength = 32767;
             this.txt_Phone.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Phone.Modified = false;
@@ -2220,7 +2263,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(48, 39);
+            this.label14.Location = new System.Drawing.Point(31, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(86, 21);
             this.label14.TabIndex = 7;
@@ -2257,7 +2300,7 @@
             this.txt_FullName.IconRight = null;
             this.txt_FullName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_FullName.Lines = new string[0];
-            this.txt_FullName.Location = new System.Drawing.Point(52, 72);
+            this.txt_FullName.Location = new System.Drawing.Point(35, 72);
             this.txt_FullName.MaxLength = 32767;
             this.txt_FullName.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_FullName.Modified = false;
@@ -2312,8 +2355,8 @@
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(90, 226);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(73, 226);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(499, 23);
             this.bunifuSeparator3.TabIndex = 5;
@@ -2354,7 +2397,7 @@
             this.tabPage3.Controls.Add(this.bunifuCards4);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1011, 649);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Confirm";
@@ -2368,7 +2411,7 @@
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.bunifuSeparator6.LineThickness = 1;
             this.bunifuSeparator6.Location = new System.Drawing.Point(662, 534);
-            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Size = new System.Drawing.Size(250, 13);
             this.bunifuSeparator6.TabIndex = 8;
@@ -2574,7 +2617,7 @@
             this.btn_EditAddress.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditAddress.Image")));
             this.btn_EditAddress.ImageActive = ((System.Drawing.Image)(resources.GetObject("btn_EditAddress.ImageActive")));
             this.btn_EditAddress.Location = new System.Drawing.Point(767, 42);
-            this.btn_EditAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_EditAddress.Margin = new System.Windows.Forms.Padding(2);
             this.btn_EditAddress.Name = "btn_EditAddress";
             this.btn_EditAddress.Size = new System.Drawing.Size(20, 20);
             this.btn_EditAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2591,7 +2634,7 @@
             this.btn_EditInfo.Image = ((System.Drawing.Image)(resources.GetObject("btn_EditInfo.Image")));
             this.btn_EditInfo.ImageActive = ((System.Drawing.Image)(resources.GetObject("btn_EditInfo.ImageActive")));
             this.btn_EditInfo.Location = new System.Drawing.Point(342, 42);
-            this.btn_EditInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_EditInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_EditInfo.Name = "btn_EditInfo";
             this.btn_EditInfo.Size = new System.Drawing.Size(20, 20);
             this.btn_EditInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2693,7 +2736,7 @@
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.bunifuSeparator5.LineThickness = 1;
             this.bunifuSeparator5.Location = new System.Drawing.Point(476, 78);
-            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
             this.bunifuSeparator5.Size = new System.Drawing.Size(311, 13);
             this.bunifuSeparator5.TabIndex = 6;
@@ -2723,7 +2766,7 @@
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.bunifuSeparator4.LineThickness = 1;
             this.bunifuSeparator4.Location = new System.Drawing.Point(51, 78);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Size = new System.Drawing.Size(311, 13);
             this.bunifuSeparator4.TabIndex = 1;
@@ -2757,7 +2800,7 @@
             this.CustomerDatabase.Controls.Add(this.label12);
             this.CustomerDatabase.Location = new System.Drawing.Point(4, 4);
             this.CustomerDatabase.Name = "CustomerDatabase";
-            this.CustomerDatabase.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.CustomerDatabase.Padding = new System.Windows.Forms.Padding(3);
             this.CustomerDatabase.Size = new System.Drawing.Size(1011, 649);
             this.CustomerDatabase.TabIndex = 3;
             this.CustomerDatabase.Text = "CustomerDatabase";
@@ -2847,7 +2890,7 @@
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(24, 25);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(40, 40);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -3120,6 +3163,12 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // InfoProvider
+            // 
+            this.InfoProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.InfoProvider.ContainerControl = this;
+            this.InfoProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("InfoProvider.Icon")));
+            // 
             // UC_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3127,7 +3176,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.bunifuPages1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_Order";
             this.Size = new System.Drawing.Size(1019, 675);
             this.bunifuToolTip1.SetToolTip(this, "");
@@ -3155,6 +3204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3251,5 +3301,7 @@
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_NewCustomer;
+        private Bunifu.UI.WinForms.BunifuDropdown cbID;
+        private System.Windows.Forms.ErrorProvider InfoProvider;
     }
 }

@@ -80,9 +80,6 @@
             this.STATUS = new System.Windows.Forms.DataGridViewImageColumn();
             this.label20 = new System.Windows.Forms.Label();
             this.btnFinalized = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnAbort = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.FilterAnimator = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuCards1.SuspendLayout();
@@ -92,8 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -120,10 +115,11 @@
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = false;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1019, 226);
+            this.bunifuCards1.Size = new System.Drawing.Size(1359, 278);
             this.bunifuCards1.TabIndex = 2;
             // 
             // panelFilter
@@ -135,9 +131,10 @@
             this.panelFilter.Controls.Add(this.label12);
             this.panelFilter.Controls.Add(this.chkbAllTime);
             this.FilterAnimator.SetDecoration(this.panelFilter, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.panelFilter.Location = new System.Drawing.Point(805, 53);
+            this.panelFilter.Location = new System.Drawing.Point(1073, 65);
+            this.panelFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFilter.Name = "panelFilter";
-            this.panelFilter.Size = new System.Drawing.Size(194, 12);
+            this.panelFilter.Size = new System.Drawing.Size(259, 15);
             this.panelFilter.TabIndex = 27;
             // 
             // ToDate
@@ -159,10 +156,11 @@
             this.ToDate.Icon = ((System.Drawing.Image)(resources.GetObject("ToDate.Icon")));
             this.ToDate.IconColor = System.Drawing.Color.White;
             this.ToDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.ToDate.Location = new System.Drawing.Point(19, 124);
-            this.ToDate.MinimumSize = new System.Drawing.Size(161, 22);
+            this.ToDate.Location = new System.Drawing.Point(25, 153);
+            this.ToDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ToDate.MinimumSize = new System.Drawing.Size(213, 22);
             this.ToDate.Name = "ToDate";
-            this.ToDate.Size = new System.Drawing.Size(161, 22);
+            this.ToDate.Size = new System.Drawing.Size(213, 26);
             this.ToDate.TabIndex = 30;
             this.ToDate.Visible = false;
             // 
@@ -172,9 +170,10 @@
             this.FilterAnimator.SetDecoration(this.lbSpecific, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lbSpecific.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSpecific.ForeColor = System.Drawing.Color.DimGray;
-            this.lbSpecific.Location = new System.Drawing.Point(45, 52);
+            this.lbSpecific.Location = new System.Drawing.Point(60, 64);
+            this.lbSpecific.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSpecific.Name = "lbSpecific";
-            this.lbSpecific.Size = new System.Drawing.Size(46, 13);
+            this.lbSpecific.Size = new System.Drawing.Size(59, 19);
             this.lbSpecific.TabIndex = 33;
             this.lbSpecific.Text = "Specific";
             // 
@@ -197,10 +196,11 @@
             this.FromDate.Icon = ((System.Drawing.Image)(resources.GetObject("FromDate.Icon")));
             this.FromDate.IconColor = System.Drawing.Color.White;
             this.FromDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.FromDate.Location = new System.Drawing.Point(19, 85);
-            this.FromDate.MinimumSize = new System.Drawing.Size(161, 22);
+            this.FromDate.Location = new System.Drawing.Point(25, 105);
+            this.FromDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FromDate.MinimumSize = new System.Drawing.Size(213, 22);
             this.FromDate.Name = "FromDate";
-            this.FromDate.Size = new System.Drawing.Size(161, 22);
+            this.FromDate.Size = new System.Drawing.Size(213, 26);
             this.FromDate.TabIndex = 29;
             this.FromDate.Visible = false;
             // 
@@ -223,8 +223,9 @@
             this.chkbSpecific.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkbSpecific.CustomCheckmarkImage = null;
             this.FilterAnimator.SetDecoration(this.chkbSpecific, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.chkbSpecific.Location = new System.Drawing.Point(24, 50);
-            this.chkbSpecific.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chkbSpecific.Location = new System.Drawing.Point(32, 62);
+            this.chkbSpecific.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkbSpecific.MinimumSize = new System.Drawing.Size(23, 21);
             this.chkbSpecific.Name = "chkbSpecific";
             this.chkbSpecific.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(69)))), ((int)(((byte)(155)))));
             this.chkbSpecific.OnCheck.BorderRadius = 2;
@@ -252,7 +253,7 @@
             this.chkbSpecific.OnUncheck.BorderRadius = 2;
             this.chkbSpecific.OnUncheck.BorderThickness = 1;
             this.chkbSpecific.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkbSpecific.Size = new System.Drawing.Size(17, 17);
+            this.chkbSpecific.Size = new System.Drawing.Size(23, 23);
             this.chkbSpecific.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.chkbSpecific.TabIndex = 32;
             this.chkbSpecific.ThreeState = false;
@@ -265,9 +266,10 @@
             this.FilterAnimator.SetDecoration(this.label12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(43, 18);
+            this.label12.Location = new System.Drawing.Point(57, 22);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 13);
+            this.label12.Size = new System.Drawing.Size(61, 19);
             this.label12.TabIndex = 31;
             this.label12.Text = "All Time";
             // 
@@ -290,8 +292,9 @@
             this.chkbAllTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkbAllTime.CustomCheckmarkImage = null;
             this.FilterAnimator.SetDecoration(this.chkbAllTime, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.chkbAllTime.Location = new System.Drawing.Point(22, 16);
-            this.chkbAllTime.MinimumSize = new System.Drawing.Size(17, 17);
+            this.chkbAllTime.Location = new System.Drawing.Point(29, 20);
+            this.chkbAllTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkbAllTime.MinimumSize = new System.Drawing.Size(23, 21);
             this.chkbAllTime.Name = "chkbAllTime";
             this.chkbAllTime.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(69)))), ((int)(((byte)(155)))));
             this.chkbAllTime.OnCheck.BorderRadius = 2;
@@ -319,7 +322,7 @@
             this.chkbAllTime.OnUncheck.BorderRadius = 2;
             this.chkbAllTime.OnUncheck.BorderThickness = 1;
             this.chkbAllTime.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.chkbAllTime.Size = new System.Drawing.Size(17, 17);
+            this.chkbAllTime.Size = new System.Drawing.Size(23, 23);
             this.chkbAllTime.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
             this.chkbAllTime.TabIndex = 29;
             this.chkbAllTime.ThreeState = false;
@@ -332,10 +335,9 @@
             this.FilterAnimator.SetDecoration(this.label8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label8.Location = new System.Drawing.Point(553, 180);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(737, 222);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.Size = new System.Drawing.Size(72, 23);
             this.label8.TabIndex = 24;
             this.label8.Text = "Aborted";
             // 
@@ -345,10 +347,9 @@
             this.FilterAnimator.SetDecoration(this.label7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label7.Location = new System.Drawing.Point(425, 180);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(567, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.Size = new System.Drawing.Size(72, 23);
             this.label7.TabIndex = 23;
             this.label7.Text = "Pending";
             // 
@@ -391,7 +392,8 @@
             this.btnFilter.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnFilter.IdleIconLeftImage")));
             this.btnFilter.IdleIconRightImage = null;
             this.btnFilter.IndicateFocus = false;
-            this.btnFilter.Location = new System.Drawing.Point(805, 10);
+            this.btnFilter.Location = new System.Drawing.Point(1073, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilter.Name = "btnFilter";
             stateProperties1.BorderColor = System.Drawing.Color.White;
             stateProperties1.BorderRadius = 3;
@@ -411,7 +413,7 @@
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.btnFilter.OnPressedState = stateProperties2;
-            this.btnFilter.Size = new System.Drawing.Size(194, 45);
+            this.btnFilter.Size = new System.Drawing.Size(259, 55);
             this.btnFilter.TabIndex = 27;
             this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFilter.TextMarginLeft = 0;
@@ -424,10 +426,9 @@
             this.FilterAnimator.SetDecoration(this.label6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label6.Location = new System.Drawing.Point(288, 180);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(384, 222);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 17);
+            this.label6.Size = new System.Drawing.Size(77, 23);
             this.label6.TabIndex = 22;
             this.label6.Text = "Finalized";
             // 
@@ -435,7 +436,8 @@
             // 
             this.FilterAnimator.SetDecoration(this.pictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(614, 176);
+            this.pictureBox3.Location = new System.Drawing.Point(819, 217);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -446,7 +448,8 @@
             // 
             this.FilterAnimator.SetDecoration(this.pictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(485, 176);
+            this.pictureBox2.Location = new System.Drawing.Point(647, 217);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -457,7 +460,8 @@
             // 
             this.FilterAnimator.SetDecoration(this.pictureBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(351, 177);
+            this.pictureBox1.Location = new System.Drawing.Point(468, 218);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -470,10 +474,9 @@
             this.FilterAnimator.SetDecoration(this.label5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label5.Location = new System.Drawing.Point(94, 174);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(125, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 25);
+            this.label5.Size = new System.Drawing.Size(186, 32);
             this.label5.TabIndex = 18;
             this.label5.Text = "ORDER STATUS:";
             // 
@@ -484,10 +487,9 @@
             this.FilterAnimator.SetDecoration(this.lbPeriod, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lbPeriod.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPeriod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.lbPeriod.Location = new System.Drawing.Point(470, 101);
-            this.lbPeriod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPeriod.Location = new System.Drawing.Point(627, 124);
             this.lbPeriod.Name = "lbPeriod";
-            this.lbPeriod.Size = new System.Drawing.Size(112, 15);
+            this.lbPeriod.Size = new System.Drawing.Size(137, 20);
             this.lbPeriod.TabIndex = 17;
             this.lbPeriod.Text = "FROM 1/10 TO 11/11";
             this.lbPeriod.Visible = false;
@@ -499,11 +501,10 @@
             this.FilterAnimator.SetDecoration(this.lbTotal, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.lbTotal.Font = new System.Drawing.Font("Segoe UI Black", 13F, System.Drawing.FontStyle.Bold);
             this.lbTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.lbTotal.Location = new System.Drawing.Point(451, 61);
-            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTotal.Location = new System.Drawing.Point(601, 75);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbTotal.Size = new System.Drawing.Size(32, 25);
+            this.lbTotal.Size = new System.Drawing.Size(37, 30);
             this.lbTotal.TabIndex = 16;
             this.lbTotal.Text = "10";
             // 
@@ -514,10 +515,9 @@
             this.FilterAnimator.SetDecoration(this.label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label2.Location = new System.Drawing.Point(481, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(641, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 21);
+            this.label2.Size = new System.Drawing.Size(150, 28);
             this.label2.TabIndex = 15;
             this.label2.Text = "ENTRIES TOTAL";
             // 
@@ -549,10 +549,10 @@
             this.txtSearch.IconRight = null;
             this.txtSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(68, 25);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Location = new System.Drawing.Point(91, 31);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.MaxLength = 32767;
-            this.txtSearch.MinimumSize = new System.Drawing.Size(75, 28);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(100, 34);
             this.txtSearch.Modified = false;
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -585,7 +585,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(150, 30);
+            this.txtSearch.Size = new System.Drawing.Size(200, 37);
             this.txtSearch.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtSearch.TabIndex = 13;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -603,10 +603,9 @@
             this.label1.AutoSize = true;
             this.FilterAnimator.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(398, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(531, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 50);
+            this.label1.Size = new System.Drawing.Size(344, 62);
             this.label1.TabIndex = 12;
             this.label1.Text = "Order History";
             // 
@@ -617,12 +616,13 @@
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Gainsboro;
             this.bunifuShadowPanel1.Controls.Add(this.dtgvOrder);
             this.FilterAnimator.SetDecoration(this.bunifuShadowPanel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(43, 313);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(57, 385);
+            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Empty;
             this.bunifuShadowPanel1.ShadowDept = 0;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(959, 387);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(1279, 476);
             this.bunifuShadowPanel1.TabIndex = 3;
             // 
             // dtgvOrder
@@ -686,7 +686,8 @@
             this.dtgvOrder.HeaderBackColor = System.Drawing.Color.Silver;
             this.dtgvOrder.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtgvOrder.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgvOrder.Location = new System.Drawing.Point(3, 0);
+            this.dtgvOrder.Location = new System.Drawing.Point(4, 0);
+            this.dtgvOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvOrder.Name = "dtgvOrder";
             this.dtgvOrder.ReadOnly = true;
             this.dtgvOrder.RowHeadersVisible = false;
@@ -696,7 +697,7 @@
             this.dtgvOrder.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Gray;
             this.dtgvOrder.RowTemplate.Height = 40;
             this.dtgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvOrder.Size = new System.Drawing.Size(953, 381);
+            this.dtgvOrder.Size = new System.Drawing.Size(1271, 469);
             this.dtgvOrder.TabIndex = 0;
             this.dtgvOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dtgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvOrder_CellClick);
@@ -759,9 +760,10 @@
             this.FilterAnimator.SetDecoration(this.label20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label20.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label20.Location = new System.Drawing.Point(52, 244);
+            this.label20.Location = new System.Drawing.Point(69, 300);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 32);
+            this.label20.Size = new System.Drawing.Size(126, 41);
             this.label20.TabIndex = 22;
             this.label20.Text = "Action:";
             // 
@@ -804,7 +806,8 @@
             this.btnFinalized.IdleIconLeftImage = null;
             this.btnFinalized.IdleIconRightImage = null;
             this.btnFinalized.IndicateFocus = false;
-            this.btnFinalized.Location = new System.Drawing.Point(752, 244);
+            this.btnFinalized.Location = new System.Drawing.Point(1003, 300);
+            this.btnFinalized.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFinalized.Name = "btnFinalized";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.BorderRadius = 40;
@@ -824,50 +827,12 @@
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.btnFinalized.OnPressedState = stateProperties8;
-            this.btnFinalized.Size = new System.Drawing.Size(105, 45);
+            this.btnFinalized.Size = new System.Drawing.Size(140, 55);
             this.btnFinalized.TabIndex = 24;
             this.btnFinalized.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFinalized.TextMarginLeft = 0;
             this.btnFinalized.UseDefaultRadiusAndThickness = true;
             this.btnFinalized.Click += new System.EventHandler(this.btnFinalize_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.FilterAnimator.SetDecoration(this.label9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.label9.Location = new System.Drawing.Point(220, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Pages 1/100";
-            // 
-            // bunifuImageButton1
-            // 
-            this.FilterAnimator.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(291, 244);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(25, 25);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.bunifuImageButton1.TabIndex = 26;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // bunifuImageButton2
-            // 
-            this.FilterAnimator.SetDecoration(this.bunifuImageButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(322, 244);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(25, 25);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.bunifuImageButton2.TabIndex = 27;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
             // 
             // btnAbort
             // 
@@ -908,7 +873,8 @@
             this.btnAbort.IdleIconLeftImage = null;
             this.btnAbort.IdleIconRightImage = null;
             this.btnAbort.IndicateFocus = false;
-            this.btnAbort.Location = new System.Drawing.Point(880, 244);
+            this.btnAbort.Location = new System.Drawing.Point(1173, 300);
+            this.btnAbort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbort.Name = "btnAbort";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties9.BorderRadius = 40;
@@ -928,7 +894,7 @@
             stateProperties10.IconLeftImage = null;
             stateProperties10.IconRightImage = null;
             this.btnAbort.OnPressedState = stateProperties10;
-            this.btnAbort.Size = new System.Drawing.Size(105, 45);
+            this.btnAbort.Size = new System.Drawing.Size(140, 55);
             this.btnAbort.TabIndex = 28;
             this.btnAbort.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAbort.TextMarginLeft = 0;
@@ -958,21 +924,18 @@
             // 
             // UC_History
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.btnAbort);
-            this.Controls.Add(this.bunifuImageButton2);
-            this.Controls.Add(this.bunifuImageButton1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnFinalized);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Controls.Add(this.bunifuCards1);
             this.FilterAnimator.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_History";
-            this.Size = new System.Drawing.Size(1019, 700);
+            this.Size = new System.Drawing.Size(1359, 862);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.panelFilter.ResumeLayout(false);
@@ -982,8 +945,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1012,9 +973,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
         private System.Windows.Forms.DataGridViewImageColumn STATUS;
-        private System.Windows.Forms.Label label9;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAbort;
         private Bunifu.UI.WinForms.BunifuTransition FilterAnimator;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnFilter;

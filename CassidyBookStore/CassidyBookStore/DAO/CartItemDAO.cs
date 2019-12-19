@@ -45,6 +45,26 @@ namespace CassidyBookStore.DAO
             DataProvider.Instance.ExecuteQuery("DELETE FROM CART WHERE BOOKID = " + id);
         }
 
+        public List<int> GetAllBookIDFromCart(int orderId)
+        {
+            List<int> listBookID = new List<int>();
+            string query = "SELECT BOOKID FROM CART WHERE ORDERID = " + orderId;
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in result.Rows)
+            {
+                int bookID = int.Parse(row["BOOKID"].ToString());
+                listBookID.Add(bookID);
+            }
+            return listBookID;            
+        }
+
+        public int GetBookQuantity(int bookID, int orderID)
+        {            
+            string query = string.Format("SELECT QUANTITY FROM CART WHERE ORDERID = {0} AND BOOKID = {1}",orderID,bookID);
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            return (int)result;
+        }
+
         //Clear Cart When Press Clear All Button
         public void ClearAllCartItem(int id)
         {

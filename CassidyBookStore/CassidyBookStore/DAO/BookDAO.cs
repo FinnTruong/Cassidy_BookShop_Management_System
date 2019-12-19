@@ -44,6 +44,30 @@ namespace CassidyBookStore.DAO
             return listBookTitle;
         }
 
+        public List<string> LoadBookID(string bookName)
+        {
+            List<string> listBookTitle = new List<string>();
+
+            string query = string.Format("SELECT ID FROM BOOKS WHERE BOOKTITLE = '{0}'",bookName);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                string bookTitle = item["ID"].ToString();
+                listBookTitle.Add(bookTitle);
+            }
+            return listBookTitle;
+        }
+
+        public bool IsSameTitle(string bookTitle)
+        {
+            string query = string.Format("SELECT * FROM BOOKS WHERE BOOKTITLE = '{0}'", bookTitle);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 1;
+        }
+
+
         public bool IsAcceptedBookTitle(string bookTitle)
         {
             string query = string.Format("SELECT * FROM BOOKS WHERE BOOKTITLE = '{0}'", bookTitle);
@@ -174,6 +198,8 @@ namespace CassidyBookStore.DAO
             else
                 return result.ToString();
         }
+
+
 
     }
 }

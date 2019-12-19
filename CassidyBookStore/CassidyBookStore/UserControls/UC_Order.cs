@@ -146,22 +146,31 @@ namespace CassidyBookStore.UserControls
 
         void ClearInfo()
         {
+            txtID.Visible = true;
+            cbID.Visible = false;
             txtID.Clear();
             txtAuthor.Clear();
             txtStock.Clear();
             txtPrice.Clear();
             txtQuantity.Clear();
             txtRemain.Clear();
+            
         }
 
 
         private void GetRemain(object sender, EventArgs e)
         {
-            int num;
+            int num;            
             if (int.TryParse(txtQuantity.Text, out num) && int.TryParse(txtStock.Text, out num))
             {
+
                 int stock = int.Parse(txtStock.Text);
                 int quantity = int.Parse(txtQuantity.Text);
+                if(quantity <= 0)
+                {
+                    MessageBox.Show("Invalid quantity");
+                    return;
+                }
                 int remain = stock - quantity;
                 if (remain >= 0)
                     txtRemain.Text = remain.ToString();
@@ -177,7 +186,15 @@ namespace CassidyBookStore.UserControls
 
         void UpdateStorage()
         {
-            int bookID = int.Parse(txtID.Text);
+            int bookID;
+            if (cbID.Visible == true)
+            {
+                bookID = int.Parse(cbID.Text);
+            }
+            else
+            {
+                bookID = int.Parse(txtID.Text);
+            }
             int remain = int.Parse(txtRemain.Text);
             BookDAO.Instance.UpdateStorage(bookID, remain);
         }
@@ -192,6 +209,18 @@ namespace CassidyBookStore.UserControls
             }
 
             txtBookTitle.AutoCompleteCustomSource = bookTitle;
+        }
+
+        void LoadComboBoxID(string bookTitle)
+        {
+            List<string> bookID = new List<string>();
+            List<string> listBookID = BookDAO.Instance.LoadBookID(bookTitle);
+            foreach (string item in listBookID)
+            {
+                bookID.Add(item);
+            }
+            cbID.DataSource = bookID;
+            cbID.MaxDropDownItems = bookID.Count() + 1;
         }
 
         void GetTotal()
@@ -226,7 +255,15 @@ namespace CassidyBookStore.UserControls
             try
             {
                 int orderID = curOrderID;
-                int bookID = int.Parse(txtID.Text);
+                int bookID;
+                if(cbID.Visible == true)
+                {
+                    bookID = int.Parse(cbID.Text);
+                }
+                else
+                {
+                    bookID = int.Parse(txtID.Text);
+                }
                 int quantity = int.Parse(txtQuantity.Text);
                 float price = float.Parse(txtPrice.Text);
 
@@ -245,9 +282,9 @@ namespace CassidyBookStore.UserControls
                 UpdateStorage();
                 ClearAll();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Invalid Info");
+                MessageBox.Show(ex.ToString());
             }
         }
         private void btnClearCart_Click(object sender, EventArgs e)
@@ -255,12 +292,23 @@ namespace CassidyBookStore.UserControls
             //Clear ListView
             lsvCart.Items.Clear();
 
+            //Update Storage
+            List<int> listBookID = CartItemDAO.Instance.GetAllBookIDFromCart(curOrderID); //get all the book from current order
+            foreach (int item in listBookID) //loop through every book
+            {
+                int quantity = CartItemDAO.Instance.GetBookQuantity(item, curOrderID); //get the book quantity in the cart
+                int stock = int.Parse(BookDAO.Instance.GetStock(item)); //get current stock of book from storage
+                int remain = stock + quantity; //calculate the book stock after clear the cart
+                BookDAO.Instance.UpdateStorage(item, remain); //Update the storage
+            }
+
             //Clear From Database
             CartItemDAO.Instance.ClearAllCartItem(curOrderID);
 
             //Reset Amount, Total, Discount
             txt_Discount.Text = "";
             GetTotal();
+
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
@@ -268,8 +316,29 @@ namespace CassidyBookStore.UserControls
             int num;
             if (int.TryParse(txtID.Text, out num) && BookDAO.Instance.IsAcceptedID(int.Parse(txtID.Text)))
             {
-                int id = int.Parse(txtID.Text);
-                txtBookTitle.Text = BookDAO.Instance.GetBookTitle(id);
+                int id = int.Parse(txtID.Text);                
+                txtAuthor.Text = BookDAO.Instance.GetAuthor(id);
+                txtStock.Text = BookDAO.Instance.GetStock(id);
+                txtPrice.Text = BookDAO.Instance.GetPrice(id);
+            }
+        }
+        private void cbID_TextChanged(object sender, EventArgs e)
+        {
+            int num;
+            if (int.TryParse(cbID.Text, out num) && BookDAO.Instance.IsAcceptedID(int.Parse(cbID.Text)))
+            {
+                int id = int.Parse(cbID.Text);                
+                txtAuthor.Text = BookDAO.Instance.GetAuthor(id);
+                txtStock.Text = BookDAO.Instance.GetStock(id);
+                txtPrice.Text = BookDAO.Instance.GetPrice(id);
+            }
+        }
+        private void cbID_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int num;
+            if (int.TryParse(cbID.SelectedItem.ToString(), out num) && BookDAO.Instance.IsAcceptedID(int.Parse(cbID.SelectedItem.ToString())))
+            {
+                int id = int.Parse(cbID.SelectedItem.ToString());
                 txtAuthor.Text = BookDAO.Instance.GetAuthor(id);
                 txtStock.Text = BookDAO.Instance.GetStock(id);
                 txtPrice.Text = BookDAO.Instance.GetPrice(id);
@@ -280,8 +349,19 @@ namespace CassidyBookStore.UserControls
         {
             if (BookDAO.Instance.IsAcceptedBookTitle(txtBookTitle.Text))
             {
-                txtID.Text = BookDAO.Instance.GetIdFromBookTitle(txtBookTitle.Text);
-            }
+                if (BookDAO.Instance.IsSameTitle(txtBookTitle.Text))
+                {
+                    txtID.Visible = false;
+                    cbID.Visible = true;
+                    InfoProvider.SetError(txtBookTitle, "There are more than one book with this title. Please specified ID");
+                    LoadComboBoxID(txtBookTitle.Text);
+                }
+                else
+                {
+                    InfoProvider.SetError(txtBookTitle, null);
+                    txtID.Text = BookDAO.Instance.GetIdFromBookTitle(txtBookTitle.Text);
+                }
+            }           
             else
             {
                 ClearInfo();
@@ -542,6 +622,9 @@ namespace CassidyBookStore.UserControls
             ConfirmOrder();
         }
 
+
         #endregion
+
+
     }
 }
