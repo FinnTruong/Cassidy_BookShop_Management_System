@@ -143,10 +143,10 @@ namespace CassidyBookStore.DAO
         {
             string query = "SELECT COUNT(*) FROM ORDERS";
             object result = DataProvider.Instance.ExecuteScalar(query);
-            if (result == null)
+            int total = int.Parse(result.ToString());
+            if (total <= 0)
                 return 0;
-            else
-                return int.Parse(result.ToString())-1;
+            return total - 1;
         }
 
         public int GetTotalOrderInPeriod(DateTime from, DateTime to)

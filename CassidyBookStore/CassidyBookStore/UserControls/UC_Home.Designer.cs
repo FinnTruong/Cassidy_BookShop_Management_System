@@ -103,7 +103,7 @@
             this.card1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
             this.card1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(172)))), ((int)(((byte)(254)))));
             this.card1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
-            this.card1.Location = new System.Drawing.Point(-34, 747);
+            this.card1.Location = new System.Drawing.Point(-53, 747);
             this.card1.Name = "card1";
             this.card1.Quality = 10;
             this.card1.Size = new System.Drawing.Size(212, 113);
@@ -120,7 +120,7 @@
             this.lbAllConfirmedOrders.ForeColor = System.Drawing.Color.White;
             this.lbAllConfirmedOrders.Location = new System.Drawing.Point(18, 40);
             this.lbAllConfirmedOrders.Name = "lbAllConfirmedOrders";
-            this.lbAllConfirmedOrders.Size = new System.Drawing.Size(92, 45);
+            this.lbAllConfirmedOrders.Size = new System.Drawing.Size(115, 54);
             this.lbAllConfirmedOrders.TabIndex = 7;
             this.lbAllConfirmedOrders.Text = "3000";
             this.bunifuToolTip1.SetToolTip(this.lbAllConfirmedOrders, "");
@@ -150,7 +150,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(132, 12);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
@@ -173,7 +173,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 25);
+            this.label1.Size = new System.Drawing.Size(144, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Orders";
             this.bunifuToolTip1.SetToolTip(this.label1, "");
@@ -188,7 +188,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(0, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 45);
+            this.label3.Size = new System.Drawing.Size(138, 54);
             this.label3.TabIndex = 7;
             this.label3.Text = "2500$";
             this.bunifuToolTip1.SetToolTip(this.label3, "");
@@ -218,7 +218,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(140, 12);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Transparent;
@@ -241,7 +241,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 25);
+            this.label4.Size = new System.Drawing.Size(170, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Expenses";
             this.bunifuToolTip1.SetToolTip(this.label4, "");
@@ -260,7 +260,7 @@
             this.card2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
             this.card2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(113)))), ((int)(((byte)(245)))));
             this.card2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(113)))), ((int)(((byte)(205)))));
-            this.card2.Location = new System.Drawing.Point(210, 747);
+            this.card2.Location = new System.Drawing.Point(191, 747);
             this.card2.Name = "card2";
             this.card2.Quality = 10;
             this.card2.Size = new System.Drawing.Size(212, 113);
@@ -277,7 +277,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(27, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 45);
+            this.label5.Size = new System.Drawing.Size(92, 54);
             this.label5.TabIndex = 7;
             this.label5.Text = "516";
             this.bunifuToolTip1.SetToolTip(this.label5, "");
@@ -292,7 +292,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 25);
+            this.label6.Size = new System.Drawing.Size(186, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "Total Customers";
             this.bunifuToolTip1.SetToolTip(this.label6, "");
@@ -311,7 +311,7 @@
             this.card4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.card4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.card4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
-            this.card4.Location = new System.Drawing.Point(698, 747);
+            this.card4.Location = new System.Drawing.Point(679, 747);
             this.card4.Name = "card4";
             this.card4.Quality = 10;
             this.card4.Size = new System.Drawing.Size(219, 113);
@@ -343,7 +343,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(144, 12);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
@@ -366,7 +366,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(15, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 45);
+            this.label7.Size = new System.Drawing.Size(115, 54);
             this.label7.TabIndex = 7;
             this.label7.Text = "1000";
             this.bunifuToolTip1.SetToolTip(this.label7, "");
@@ -396,7 +396,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(144, 12);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Transparent;
@@ -419,7 +419,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 25);
+            this.label8.Size = new System.Drawing.Size(182, 32);
             this.label8.TabIndex = 0;
             this.label8.Text = "Books Available";
             this.bunifuToolTip1.SetToolTip(this.label8, "");
@@ -438,7 +438,7 @@
             this.card3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
             this.card3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(255)))), ((int)(((byte)(120)))));
             this.card3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(214)))));
-            this.card3.Location = new System.Drawing.Point(454, 747);
+            this.card3.Location = new System.Drawing.Point(435, 747);
             this.card3.Name = "card3";
             this.card3.Quality = 10;
             this.card3.Size = new System.Drawing.Size(212, 113);
@@ -460,7 +460,7 @@
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(27, 132);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(226, 61);
+            this.label23.Size = new System.Drawing.Size(285, 77);
             this.label23.TabIndex = 16;
             this.label23.Text = "Welcome";
             this.bunifuToolTip1.SetToolTip(this.label23, "");
@@ -474,7 +474,7 @@
             this.label24.ForeColor = System.Drawing.Color.DimGray;
             this.label24.Location = new System.Drawing.Point(46, 678);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(175, 35);
+            this.label24.Size = new System.Drawing.Size(224, 45);
             this.label24.TabIndex = 17;
             this.label24.Text = "Store History";
             this.bunifuToolTip1.SetToolTip(this.label24, "");
@@ -485,7 +485,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(422, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(384, 113);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(421, 525);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -502,7 +502,7 @@
             this.label18.ForeColor = System.Drawing.Color.DimGray;
             this.label18.Location = new System.Drawing.Point(18, 12);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(184, 35);
+            this.label18.Size = new System.Drawing.Size(234, 45);
             this.label18.TabIndex = 20;
             this.label18.Text = "Yearly Report";
             this.bunifuToolTip1.SetToolTip(this.label18, "");
@@ -537,7 +537,7 @@
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 40;
-            this.bunifuCards2.Size = new System.Drawing.Size(843, 412);
+            this.bunifuCards2.Size = new System.Drawing.Size(805, 412);
             this.bunifuCards2.TabIndex = 21;
             this.bunifuToolTip1.SetToolTip(this.bunifuCards2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuCards2, null);
@@ -548,10 +548,10 @@
             this.lbTotalProfits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalProfits.AutoSize = true;
             this.lbTotalProfits.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbTotalProfits.Location = new System.Drawing.Point(739, 286);
+            this.lbTotalProfits.Location = new System.Drawing.Point(701, 286);
             this.lbTotalProfits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotalProfits.Name = "lbTotalProfits";
-            this.lbTotalProfits.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalProfits.Size = new System.Drawing.Size(56, 28);
             this.lbTotalProfits.TabIndex = 21;
             this.lbTotalProfits.Text = "1000";
             this.bunifuToolTip1.SetToolTip(this.lbTotalProfits, "");
@@ -563,10 +563,10 @@
             this.lbTotalExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalExpense.AutoSize = true;
             this.lbTotalExpense.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbTotalExpense.Location = new System.Drawing.Point(739, 201);
+            this.lbTotalExpense.Location = new System.Drawing.Point(701, 201);
             this.lbTotalExpense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotalExpense.Name = "lbTotalExpense";
-            this.lbTotalExpense.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalExpense.Size = new System.Drawing.Size(56, 28);
             this.lbTotalExpense.TabIndex = 20;
             this.lbTotalExpense.Text = "2000";
             this.bunifuToolTip1.SetToolTip(this.lbTotalExpense, "");
@@ -578,10 +578,10 @@
             this.lbTotalIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalIncome.AutoSize = true;
             this.lbTotalIncome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbTotalIncome.Location = new System.Drawing.Point(739, 121);
+            this.lbTotalIncome.Location = new System.Drawing.Point(701, 121);
             this.lbTotalIncome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTotalIncome.Name = "lbTotalIncome";
-            this.lbTotalIncome.Size = new System.Drawing.Size(46, 21);
+            this.lbTotalIncome.Size = new System.Drawing.Size(56, 28);
             this.lbTotalIncome.TabIndex = 19;
             this.lbTotalIncome.Text = "1000";
             this.bunifuToolTip1.SetToolTip(this.lbTotalIncome, "");
@@ -592,7 +592,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(197)))), ((int)(((byte)(176)))));
-            this.panel2.Location = new System.Drawing.Point(479, 44);
+            this.panel2.Location = new System.Drawing.Point(441, 44);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(20, 16);
@@ -605,7 +605,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Location = new System.Drawing.Point(355, 42);
+            this.panel1.Location = new System.Drawing.Point(317, 42);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(20, 16);
@@ -620,9 +620,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(505, 42);
+            this.label13.Location = new System.Drawing.Point(467, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 19);
+            this.label13.Size = new System.Drawing.Size(67, 23);
             this.label13.TabIndex = 16;
             this.label13.Text = "Income";
             this.bunifuToolTip1.SetToolTip(this.label13, "");
@@ -635,9 +635,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(387, 41);
+            this.label12.Location = new System.Drawing.Point(349, 41);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 19);
+            this.label12.Size = new System.Drawing.Size(72, 23);
             this.label12.TabIndex = 15;
             this.label12.Text = "Expense";
             this.bunifuToolTip1.SetToolTip(this.label12, "");
@@ -650,7 +650,7 @@
             this.btnReload.BackColor = System.Drawing.Color.Transparent;
             this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
             this.btnReload.ImageActive = null;
-            this.btnReload.Location = new System.Drawing.Point(797, 4);
+            this.btnReload.Location = new System.Drawing.Point(759, 4);
             this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(43, 43);
@@ -669,9 +669,9 @@
             this.lbP.AutoSize = true;
             this.lbP.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbP.ForeColor = System.Drawing.Color.Gray;
-            this.lbP.Location = new System.Drawing.Point(632, 285);
+            this.lbP.Location = new System.Drawing.Point(594, 285);
             this.lbP.Name = "lbP";
-            this.lbP.Size = new System.Drawing.Size(51, 19);
+            this.lbP.Size = new System.Drawing.Size(62, 23);
             this.lbP.TabIndex = 13;
             this.lbP.Text = "Profits:";
             this.bunifuToolTip1.SetToolTip(this.lbP, "");
@@ -684,9 +684,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(632, 201);
+            this.label10.Location = new System.Drawing.Point(594, 201);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 19);
+            this.label10.Size = new System.Drawing.Size(117, 23);
             this.label10.TabIndex = 12;
             this.label10.Text = "Total Expense:";
             this.bunifuToolTip1.SetToolTip(this.label10, "");
@@ -699,9 +699,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(632, 121);
+            this.label11.Location = new System.Drawing.Point(594, 121);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 19);
+            this.label11.Size = new System.Drawing.Size(112, 23);
             this.label11.TabIndex = 11;
             this.label11.Text = "Total Income:";
             this.bunifuToolTip1.SetToolTip(this.label11, "");
@@ -714,7 +714,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(612, 107);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(574, 107);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(13, 225);
@@ -749,7 +749,7 @@
             this.bunifuDataViz1.Location = new System.Drawing.Point(24, 67);
             this.bunifuDataViz1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(578, 323);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(540, 323);
             this.bunifuDataViz1.TabIndex = 1;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -768,8 +768,8 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(141, 72);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(122, 72);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(622, 21);
             this.bunifuSeparator2.TabIndex = 26;
@@ -783,7 +783,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(235, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(216, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -799,9 +799,9 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Marketing Script", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(296, 8);
+            this.label17.Location = new System.Drawing.Point(277, 8);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(352, 60);
+            this.label17.Size = new System.Drawing.Size(443, 76);
             this.label17.TabIndex = 28;
             this.label17.Text = "Bookshop Cassidy";
             this.bunifuToolTip1.SetToolTip(this.label17, "");
@@ -817,9 +817,11 @@
             this.richTextBox1.Location = new System.Drawing.Point(38, 215);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(417, 171);
+            this.richTextBox1.Size = new System.Drawing.Size(402, 185);
             this.richTextBox1.TabIndex = 29;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.Text = "With the Bookshop Cassidy Management System, we hope to help managing your store " +
+    "as simple and efficient as possible. Let\'s begin.\n\n\nHere\'s an overview of the sh" +
+    "op activities this month:";
             this.bunifuToolTip1.SetToolTip(this.richTextBox1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.richTextBox1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.richTextBox1, "");
@@ -827,7 +829,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(36, 408);
+            this.pictureBox3.Location = new System.Drawing.Point(36, 394);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -842,9 +844,9 @@
             this.lbBestSeller.AutoSize = true;
             this.lbBestSeller.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBestSeller.ForeColor = System.Drawing.Color.DimGray;
-            this.lbBestSeller.Location = new System.Drawing.Point(82, 417);
+            this.lbBestSeller.Location = new System.Drawing.Point(82, 403);
             this.lbBestSeller.Name = "lbBestSeller";
-            this.lbBestSeller.Size = new System.Drawing.Size(178, 19);
+            this.lbBestSeller.Size = new System.Drawing.Size(215, 24);
             this.lbBestSeller.TabIndex = 31;
             this.lbBestSeller.Text = "This month best seller is";
             this.bunifuToolTip1.SetToolTip(this.lbBestSeller, "");
@@ -854,7 +856,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(36, 473);
+            this.pictureBox4.Location = new System.Drawing.Point(36, 459);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -869,9 +871,9 @@
             this.lbProfits.AutoSize = true;
             this.lbProfits.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProfits.ForeColor = System.Drawing.Color.DimGray;
-            this.lbProfits.Location = new System.Drawing.Point(82, 482);
+            this.lbProfits.Location = new System.Drawing.Point(82, 468);
             this.lbProfits.Name = "lbProfits";
-            this.lbProfits.Size = new System.Drawing.Size(274, 19);
+            this.lbProfits.Size = new System.Drawing.Size(338, 24);
             this.lbProfits.TabIndex = 34;
             this.lbProfits.Text = "This month profits curently is S100.00";
             this.bunifuToolTip1.SetToolTip(this.lbProfits, "");
@@ -883,9 +885,9 @@
             this.lbTotalOrders.AutoSize = true;
             this.lbTotalOrders.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotalOrders.ForeColor = System.Drawing.Color.DimGray;
-            this.lbTotalOrders.Location = new System.Drawing.Point(82, 549);
+            this.lbTotalOrders.Location = new System.Drawing.Point(82, 535);
             this.lbTotalOrders.Name = "lbTotalOrders";
-            this.lbTotalOrders.Size = new System.Drawing.Size(362, 19);
+            this.lbTotalOrders.Size = new System.Drawing.Size(444, 24);
             this.lbTotalOrders.TabIndex = 36;
             this.lbTotalOrders.Text = "There have been 100 confirmed orders this month";
             this.bunifuToolTip1.SetToolTip(this.lbTotalOrders, "");
@@ -895,7 +897,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(36, 540);
+            this.pictureBox5.Location = new System.Drawing.Point(36, 526);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -967,7 +969,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "UC_Home";
-            this.Size = new System.Drawing.Size(876, 675);
+            this.Size = new System.Drawing.Size(838, 675);
             this.bunifuToolTip1.SetToolTip(this, "");
             this.bunifuToolTip1.SetToolTipIcon(this, null);
             this.bunifuToolTip1.SetToolTipTitle(this, "");

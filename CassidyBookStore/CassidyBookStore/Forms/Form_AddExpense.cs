@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,7 +64,7 @@ namespace CassidyBookStore.Forms
             {
                 string title = txtTitle.Text;
                 float amount = float.Parse(txtAmount.Text);
-                string date = txt_Date.Value.ToString();
+                string date = txt_Date.Value.ToString("MM/dd/yyyy");
                 string description = txtDescription.Text;
                 if(ExpenseDAO.Instance.InsertExpense(title,amount,date,description))
                 {
@@ -75,9 +76,9 @@ namespace CassidyBookStore.Forms
                     MessageBox.Show("Error");
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -88,7 +89,7 @@ namespace CassidyBookStore.Forms
                 int id = int.Parse(uce.dtgvExpense.Rows[curRowIndex].Cells["Id"].Value.ToString());
                 string title = txtTitle.Text;
                 float amount = float.Parse(txtAmount.Text);
-                string date = txt_Date.Value.ToString();
+                string date = txt_Date.Value.ToString("MM/dd/yyyy");
                 string description = txtDescription.Text;
                 if (ExpenseDAO.Instance.UpdateExpense(title, amount, date, description, id))
                 {
@@ -100,7 +101,7 @@ namespace CassidyBookStore.Forms
                     MessageBox.Show("Error");
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 MessageBox.Show("Error");
             }

@@ -30,7 +30,7 @@ namespace CassidyBookStore.DAO
         {
             if (title != "")
             {
-                string query = string.Format("UPDATE EXPENSES SET TITLE ='{0}', AMOUNT = {1}, DATE ='{2}', DESCRIPTION ='{3}' WHERE ID = {4}", title, amount, date, description,id);
+                string query = string.Format("UPDATE EXPENSES SET TITLE ='{0}', AMOUNT = {1}, DATE = '{2}', DESCRIPTION ='{3}' WHERE ID = {4}", title, amount, date, description,id);
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
             }
@@ -62,9 +62,12 @@ namespace CassidyBookStore.DAO
 
         public float GetTotalExpense()
         {
+            float num;
             string query = "SELECT SUM(AMOUNT) FROM EXPENSES";
             object result = DataProvider.Instance.ExecuteScalar(query);
-            return float.Parse(result.ToString());
+            if (result != null && float.TryParse(result.ToString(), out num))
+                return num;
+            return 0;
         }
 
         public float GetThisMonthExpenses(string month)

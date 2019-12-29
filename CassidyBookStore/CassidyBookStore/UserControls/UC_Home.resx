@@ -121,7 +121,7 @@
   <data name="card1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACFSURBVChTY/Bf8++/9/p//903//vvvO3ff/td//5b7/33
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACFSURBVChTY/Bf8++/9/p//903//vvvO3ff/td//5b7/33
         3/zgv//GR/791z/x77/26X//GYhRpH4eqJAYRcqXgAqJUSR/DaiQGEXSN4EKsSnSACpSASpSACqSASqS
         uAtUiM0kdEUiD4AKsVmHrkjgCVAhNjehK+J5DlSIzeHoijhe//sPABn+Jy6+sJ3EAAAAAElFTkSuQmCC
 </value>
@@ -151,6 +151,9 @@
         gg==
 </value>
   </data>
+  <metadata name="bunifuToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 17</value>
+  </metadata>
   <data name="bunifuFlatButton2.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAstJREFUaEPt
@@ -172,7 +175,7 @@
   <data name="card2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACBSURBVChThc7JCsJQEAXR/uX6RxEEUYJDiAMhDoQ4EFSy
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACBSURBVChThc7JCsJQEAXR/uX6RxEEUYJDiAMhDoQ4EFSy
         vqZ3zSPw9oeibMagOT8t+GhJrzVvFTy1pVNJq4q7TlxlEa0C2gdU08hyJUcXallaSlEzohtnWVo6JCVH
         LUdZruToQSWbGo+oG9GLUjY1HkuOenayXMnRl40sV3I0UOgPciU+cXESBXkAAAAASUVORK5CYII=
 </value>
@@ -180,7 +183,7 @@
   <data name="card4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVChTbc4hEsIwEIXhXoE2bbkBDgUKh0O1qigcDgUK
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACqSURBVChTbc4hEsIwEIXhXoE2bbkBDgUKh0O1qigcDgUK
         FA6HAoXjiMkGvbxNaJthVqzab/55mZ1N2M5xi5ztKme3xm0Kdi2uM+x2hmlvOAtoGZFN0TYiB0SHEnAo
         4SmoSUtlQHQU+F/qcEmJTrgz4LAplAqm36a+JMhfK0Bl+FiqmID8TaAyPKBLRATk7zWgMnws1QH5h0Bl
         eFryT9wLUBsum/qSoM97yl8tRvFd6YycnwAAAABJRU5ErkJggg==
@@ -229,7 +232,7 @@
   <data name="card3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVChTbc65CsJQEEbheWwLRSISXHBBFBc0uCAKWthY
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACdSURBVChTbc65CsJQEEbheWwLRSISXHBBFBc0uCAKWthY
         mMLGxsZnOt57h5AbnWaqjzO/nKlxpM6BhB0pGX3WjFgyZe7ujA0T9kiBtgH1IrRwV9GYE1KiailGA66I
         vtPS6uedR0MuLnFD/jdllZJHXe6INVyRljxKyRFreIE6AT1o80Ss4SXKA0p4IdZwfaellkNN3og1PC55
         1ODDF4LhP63N1HV3AAAAAElFTkSuQmCC
@@ -1283,11 +1286,6 @@
         fYsYkeq6R0AYhEWfFez1wRjWxjZX3vVo4YmyVSTbd4uOqXKa5rr461HCYo8PzqjrRRIqqE+ysnwfY49T
         tqw/i5/AvBsnDMsR8fvs8cGa1Szlp3wl7WJ4IH6LGDz7MwU7dOi/zLqgWHEiY4YAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-Here's an overview of the shop activities this month:</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
